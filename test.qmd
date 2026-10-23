@@ -1,33 +1,165 @@
 ---
+title: Closeread Feature Tour
 format:
-    closeread-html:
-        embed-resources: true
-
+  closeread-html:
+    # Set to true to show trigger/sticky outlines while you build a story
+    debug-mode: false
+    # Removes the gap Quarto leaves above the title block
+    remove-header-space: false
+    # Default layout for every cr-section (override per section with layout="...")
+    # Options: sidebar-left, sidebar-right, overlay-left, overlay-center, overlay-right
+    cr-section:
+      layout: sidebar-left
+    # Theme options
+    cr-style:
+      narrative-background-color-overlay: "#1f2937cc"
+      narrative-text-color-overlay: "#f9fafb"
+      narrative-background-color-sidebar: "#f3f4f6"
+      narrative-text-color-sidebar: "#111827"
+      narrative-font-family: "Georgia, serif"
+      narrative-font-size: 1.15rem
+      narrative-sidebar-width: 1fr
+      narrative-border-radius: 6px
+      narrative-overlay-max-width: 40ch
+      section-background-color: "#ffffff"
+      poem-font-family: "Georgia, serif"
 ---
+
+Ordinary Quarto text outside a `cr-section` scrolls as usual. Each section below
+shows a different group of closeread features.
+
+# 1. Highlighting and zooming (sidebar-left)
 
 :::{.cr-section}
 
-Closeread lets you pin content in a sticky column while narrative text scrolls past. @cr-poem
+A **trigger** is any paragraph that contains `@cr-<id>`. When it scrolls into view,
+the sticky with that id appears. @cr-poem
 
-The sticky element stays in view as you read. Here we highlight the first line. [@cr-poem]{highlight="1"}
+`highlight="1"` highlights a line by its number. [@cr-poem]{highlight="1"}
 
-And now we zoom into the last two lines. [@cr-poem]{highlight="3-4" zoom-to="3"}
+A range works too: `highlight="2-3"`. [@cr-poem]{highlight="2-3"}
+
+You can also highlight a span you've tagged with an id, like
+`[yellow wood]{#cr-wood}`. [@cr-poem]{highlight="cr-wood"}
+
+`zoom-to="4"` zooms in on line 4 and centers it. [@cr-poem]{zoom-to="4"}
+
+`hlz="5"` highlights and zooms in one step. [@cr-poem]{hlz="5"}
 
 :::{#cr-poem}
-| Two roads diverged in a yellow wood,
+| Two roads diverged in a [yellow wood]{#cr-wood},
 | And sorry I could not travel both
 | And be one traveler, long I stood
 | And looked down one as far as I could
+| To where it bent in the undergrowth;
 :::
 
-Next, a different sticky: a simple diagram. @cr-box
+:::
 
-:::{#cr-box}
+# 2. Code as a sticky (sidebar-right)
+
+:::{.cr-section layout="sidebar-right"}
+
+Code blocks can be stickies too. This section uses `layout="sidebar-right"`. @cr-code
+
+Code lines can be highlighted by number, just like poem lines. [@cr-code]{highlight="1-2"}
+
+Here we highlight the loop body. [@cr-code]{highlight="5-6"}
+
+A trigger can also be a whole div with `focus-on="cr-code"` instead of an inline `@cr-code`.
+This is useful for longer passages with several paragraphs.
+
+:::{focus-on="cr-code" highlight="8"}
+This entire div is one trigger.
+
+It highlights the `return` line.
+:::
+
+:::{#cr-code}
+```python
+def fizzbuzz(n):
+    out = []
+    for i in range(1, n + 1):
+        word = ""
+        if i % 3 == 0: word += "Fizz"
+        if i % 5 == 0: word += "Buzz"
+        out.append(word or str(i))
+    return out
 ```
-+---------+      +---------+
-|  Text   | ---> | Sticky  |
-+---------+      +---------+
+:::
+
+:::
+
+# 3. Pan and scale (overlay-center)
+
+:::{.cr-section layout="overlay-center"}
+
+In overlay layouts, the text floats over a full-width sticky. @cr-map
+
+`scale-by="2"` scales the sticky by a factor. [@cr-map]{scale-by="2"}
+
+`pan-to` moves it with a CSS translate. Here it moves to the top-left corner.
+[@cr-map]{pan-to="25%,25%" scale-by="2"}
+
+And now to the bottom-right. [@cr-map]{pan-to="-25%,-25%" scale-by="2"}
+
+Back to the full view. @cr-map
+
+:::{#cr-map}
+```{=html}
+<svg viewBox="0 0 400 300" width="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#dbeafe"/>
+  <circle cx="80"  cy="70"  r="40" fill="#f59e0b"/>
+  <text   x="80"   y="75"  text-anchor="middle" font-size="14">top-left</text>
+  <circle cx="320" cy="230" r="40" fill="#10b981"/>
+  <text   x="320"  y="235" text-anchor="middle" font-size="14">bottom-right</text>
+  <rect x="160" y="120" width="80" height="60" fill="#6366f1"/>
+  <text x="200" y="155" text-anchor="middle" font-size="14" fill="white">center</text>
+</svg>
 ```
 :::
 
 :::
+
+# 4. Spacing, swapping stickies and live progress (overlay-left)
+
+:::{.cr-section layout="overlay-left"}
+
+Use the spacer shortcode to add scroll distance between triggers. @cr-box1
+
+{{< spacer 60svh >}}
+
+Point a trigger at a different id to swap stickies. @cr-box2
+
+Add the `.scale-to-fill` class to a sticky to grow it to fill the space. @cr-box3
+
+Closeread exposes scroll state to OJS. Variables include `crActiveSticky`,
+`crTriggerIndex` and `crTriggerProgress`. Scroll slowly here. @cr-progress
+
+:::{#cr-box1}
+**Sticky one**: plain Markdown can be a sticky.
+:::
+
+:::{#cr-box2}
+> **Sticky two**: so can a blockquote, table, image or figure.
+:::
+
+:::{#cr-box3 .scale-to-fill}
+🌲
+:::
+
+:::{#cr-progress}
+```{ojs}
+//| echo: false
+md`**Active sticky:** ${crActiveSticky}
+
+**Trigger index:** ${crTriggerIndex}
+
+**Progress through this trigger:** ${Math.round(crTriggerProgress * 100)}%`
+```
+:::
+
+:::
+
+Text after the final section scrolls normally again. To see trigger and sticky
+outlines while you build, set `debug-mode: true` in the header.
