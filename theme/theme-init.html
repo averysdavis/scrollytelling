@@ -1,0 +1,17 @@
+<!-- Apply the saved or system theme before first paint. Same logic and
+     storage key as the theme-init script in the site's app/layout.tsx, so
+     a choice made on either side of averysdavis.com carries over. -->
+<script>
+  (function () {
+    try {
+      var t = window.localStorage.getItem('theme');
+      if (t === 'dark' || t === 'light') {
+        document.documentElement.setAttribute('data-theme', t);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {}
+  })();
+</script>

@@ -11,4 +11,8 @@ execute:
   freeze: auto
 
 format:
-  closeread-html: default
+  closeread-html:
+    # Site colours and the light/dark toggle, shared by every story
+    css: theme/site-theme.css
+    include-in-header: theme/theme-init.html
+    include-after-body: theme/theme-toggle.html

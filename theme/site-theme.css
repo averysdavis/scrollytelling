@@ -1,0 +1,401 @@
+/* ========================================
+   SITE THEME FOR CLOSEREAD STORIES
+   Mirrors the colour tokens of averysdavis.com so stories served under
+   /scrollytelling/ read as part of the same site.
+
+   Source of truth: averysdavis.github.io/app/styles/tokens/colors.css
+   (light) and app/styles/dark-mode.css (dark). Keep the values in sync
+   when the site palette changes.
+   ======================================== */
+
+/* Light — the default when no data-theme is set */
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --color-bg: #7a9f60;
+  --color-bg-alt: #f2f5ef;
+  --color-fg: #1c2414;
+  --color-fg-bold: #1c2414;
+  --color-fg-light: #2c3a22;
+
+  --color-accent: #7f3d5c;
+  --color-accent-rgb: 127, 61, 92;
+  --color-accent-hover: #a65078;
+  --color-accent-hover-rgb: 166, 80, 120;
+
+  --color-signal: #561e38;
+
+  /* Pink band behind highlighted code lines. Capped at 10% so every
+     syntax colour keeps 4.5:1 on top of it. */
+  --color-accent-band: color-mix(in srgb, var(--color-accent) 10%, transparent);
+
+  --color-border: rgba(35, 39, 46, 0.14);
+  --color-border-alt: rgba(35, 39, 46, 0.24);
+  --color-control-border: #767b83;
+
+  --color-surface-subtle: rgba(35, 39, 46, 0.035);
+  --color-surface-hover: rgba(35, 39, 46, 0.06);
+  --color-fg-muted: rgba(35, 39, 46, 0.55);
+
+  /* --color-fg-muted is only 3.4:1 on this page, which is fine for marks
+     but not for text. Text that should read as secondary uses this
+     instead: 5.5:1 on the page, 5.1:1 on sidebar panels. */
+  --color-text-dim: #5d6656;
+
+  /* Syntax colours, all at least 4.5:1 on the code block surface */
+  --syntax-keyword: #7f3d5c;
+  --syntax-function: #3b5a26;
+  --syntax-string: #7a4a0c;
+  --syntax-number: #9c2f1c;
+  --syntax-comment: #4f5748;
+  --syntax-operator: #2c3a22;
+  --syntax-import: #2f5d6b;
+  --syntax-alert: #a3121c;
+
+  /* Ink for labels drawn on the green brand colour; dark in both modes */
+  --color-on-bg: #1c2414;
+  --color-on-accent: #f2f5ef;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-bg: #7a9f60;
+  --color-bg-alt: #202b1f;
+  --color-fg: #ffffff;
+  --color-fg-bold: #ffffff;
+  --color-fg-light: #e0ecde;
+
+  --color-accent: #eeaac6;
+  --color-accent-rgb: 238, 170, 198;
+  --color-accent-hover: #ffc8df;
+  --color-accent-hover-rgb: 255, 200, 223;
+
+  --color-signal: #eeaac6;
+
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border-alt: rgba(255, 255, 255, 0.2);
+  --color-control-border: #8b929c;
+
+  --color-surface-subtle: rgba(255, 255, 255, 0.04);
+  --color-surface-hover: rgba(255, 255, 255, 0.07);
+  --color-fg-muted: rgba(255, 255, 255, 0.5);
+
+  --color-text-dim: #a9b5a4;
+
+  --syntax-keyword: #eeaac6;
+  --syntax-function: #b9d6a3;
+  --syntax-string: #f3d9a4;
+  --syntax-number: #f5b38a;
+  --syntax-comment: #bcc7b7;
+  --syntax-operator: #e0ecde;
+  --syntax-import: #9fd3e0;
+  --syntax-alert: #ff9b9b;
+
+  --color-on-accent: #202b1f;
+}
+
+/* ===================
+   BOOTSTRAP / QUARTO
+   Quarto pages are Bootstrap 5; pointing its variables at the tokens
+   recolours the page chrome in both modes.
+   =================== */
+:root,
+:root[data-theme='light'],
+:root[data-theme='dark'] {
+  --bs-body-bg: var(--color-bg-alt);
+  --bs-body-color: var(--color-fg);
+  --bs-emphasis-color: var(--color-fg-bold);
+  --bs-secondary-color: var(--color-text-dim);
+  --bs-heading-color: var(--color-fg-bold);
+  --bs-border-color: var(--color-border);
+  --bs-link-color: var(--color-accent);
+  --bs-link-color-rgb: var(--color-accent-rgb);
+  --bs-link-hover-color: var(--color-accent-hover);
+  --bs-link-hover-color-rgb: var(--color-accent-hover-rgb);
+  --bs-code-color: var(--color-fg-light);
+  --quarto-body-bg: var(--color-bg-alt);
+  --quarto-body-color: var(--color-fg);
+  --quarto-text-muted: var(--color-text-dim);
+  --quarto-border-color: var(--color-border);
+
+  /* ===================
+     CLOSEREAD
+     Overrides the extension's own defaults (closeread.css). Colours
+     belong here, not in a story's cr-style front matter, so every story
+     follows the theme.
+     =================== */
+  --cr-section-background-color: var(--color-bg-alt);
+  --cr-narrative-background-color-sidebar: var(--color-surface-subtle);
+  --cr-narrative-text-color-sidebar: var(--color-fg);
+  --cr-narrative-background-color-overlay: color-mix(
+    in srgb,
+    var(--color-bg-alt) 92%,
+    transparent
+  );
+  --cr-narrative-text-color-overlay: var(--color-fg);
+}
+
+body {
+  background-color: var(--color-bg-alt);
+  color: var(--color-fg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  color: var(--color-fg-bold);
+}
+
+/* ===================
+   PINK STRUCTURE
+   The site's accent carries structure and emphasis: the rule that closes
+   the title block, the edges of narrative panels, and whatever a trigger
+   is pointing at. Headings stay in ink.
+   =================== */
+#title-block-header {
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 1rem;
+}
+
+strong {
+  color: var(--color-fg-bold);
+}
+
+.cr-section.sidebar-left .narrative-col .narrative {
+  border-left: 2px solid var(--color-accent);
+}
+
+.cr-section.sidebar-right .narrative-col .narrative {
+  border-right: 2px solid var(--color-accent);
+}
+
+a {
+  color: var(--color-accent);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+blockquote {
+  border-left-color: var(--color-border-alt);
+  color: var(--color-fg-light);
+}
+
+/* Overlay narrative boxes sit on top of stickies, so give them a pink
+   hairline edge instead of relying on the fill alone. */
+.cr-section.overlay-left .narrative-col .narrative,
+.cr-section.overlay-center .narrative-col .narrative,
+.cr-section.overlay-right .narrative-col .narrative {
+  border: 1px solid var(--color-accent);
+}
+
+/* ===================
+   CODE
+   Quarto writes its syntax colours as literals tuned for a white page,
+   so they are restated here against the tokens above. Selectors match
+   Quarto's own (quarto-syntax-highlighting.css, bootstrap.min.css) so
+   these win by load order.
+   =================== */
+code,
+p code:not(.sourceCode),
+li code:not(.sourceCode),
+td code:not(.sourceCode) {
+  color: var(--color-fg-light);
+  background-color: var(--color-surface-hover);
+}
+
+div.sourceCode,
+.cr-section .sticky-col .sticky-col-stack div.sourceCode {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-border);
+}
+
+div.sourceCode,
+div.sourceCode pre.sourceCode,
+pre > code.sourceCode > span,
+code.sourceCode > span,
+code span {
+  color: var(--color-fg);
+}
+
+code span.kw,
+code span.cf,
+code span.ot {
+  color: var(--syntax-keyword);
+}
+
+code span.fu,
+code span.bu,
+code span.dt,
+code span.at {
+  color: var(--syntax-function);
+}
+
+code span.st,
+code span.ch,
+code span.ss,
+code span.vs,
+code span.sc {
+  color: var(--syntax-string);
+}
+
+code span.dv,
+code span.bn,
+code span.fl,
+code span.cn {
+  color: var(--syntax-number);
+}
+
+code span.co,
+code span.do,
+code span.an,
+code span.cv,
+code span.in,
+code span.wa {
+  color: var(--syntax-comment);
+}
+
+code span.op,
+code span.va {
+  color: var(--syntax-operator);
+}
+
+code span.im,
+code span.pp {
+  color: var(--syntax-import);
+}
+
+code span.al,
+code span.er {
+  color: var(--syntax-alert);
+}
+
+/* ===================
+   POEM SIZE
+   closeread zooms by scaling the whole poem until its widest line fills
+   the column, so the zoomed size does not follow the base font size.
+   The `scale` property composes with the transform closeread sets inline
+   (a matrix only for zoom-to/hlz), shrinking the zoom about the centre so
+   the focused line stays centred.
+   =================== */
+.cr-section .sticky-col .sticky-col-stack .sticky:has(.line-block) {
+  font-size: 1.5rem;
+  transition:
+    transform 0.8s ease-in-out,
+    scale 0.8s ease-in-out,
+    font-size 0.8s ease-in-out;
+}
+
+.cr-section .sticky-col .sticky-col-stack .sticky:has(.line-block)[style*='matrix'] {
+  scale: 0.7;
+}
+
+/* ===================
+   CLOSEREAD HIGHLIGHTING
+   closeread dims code lines to 30% opacity (about 2:1) and poem lines to
+   40% black, which vanishes on the dark page. Dimmed lines take the
+   text-safe dim colour instead, so they stay readable while the
+   highlighted lines keep full ink and syntax colour.
+   =================== */
+.cr-section .sticky-col .sticky-col-stack .cr-active.cr-hl-within .sourceCode span[id^='cb'] {
+  opacity: 1;
+}
+
+.cr-section .sticky-col .sticky-col-stack .cr-active.cr-hl-within .sourceCode span[id^='cb']:not(.cr-hl),
+.cr-section
+  .sticky-col
+  .sticky-col-stack
+  .cr-active.cr-hl-within
+  .sourceCode
+  span[id^='cb']:not(.cr-hl)
+  span {
+  color: var(--color-text-dim);
+  transition: color linear 0.3s;
+}
+
+.cr-section .sticky-col .sticky-col-stack .cr-active.cr-hl-within .sourceCode span[id^='cb'].cr-hl {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--color-accent-band);
+  /* Marker sits in the block's left padding so it never covers text */
+  box-shadow: -4px 0 0 var(--color-accent);
+}
+
+.cr-section .sticky-col .sticky-col-stack .cr-active.cr-hl-within div.line-block span[id^='lb'] {
+  color: var(--color-text-dim);
+}
+
+.cr-section .sticky-col .sticky-col-stack .cr-active.cr-hl-within div.line-block span[id^='lb'].cr-hl,
+.cr-section
+  .sticky-col
+  .sticky-col-stack
+  .cr-active.cr-hl-within
+  div.line-block
+  span[id^='lb']
+  span.cr-hl {
+  color: var(--color-accent);
+}
+
+/* ===================
+   THEME TOGGLE
+   Same control as the site header (layout/navigation.css), floated
+   because stories have no header to hold it.
+   =================== */
+.theme-toggle {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  color: var(--color-fg);
+  cursor: pointer;
+  transition:
+    color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-toggle:hover {
+  color: var(--color-accent);
+  background: var(--color-surface-hover);
+}
+
+.theme-toggle:focus-visible {
+  color: var(--color-accent);
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.theme-toggle svg {
+  display: block;
+}
+
+/* Show the icon for the mode you would switch to, as the site does */
+.theme-toggle .icon-sun,
+:root[data-theme='dark'] .theme-toggle .icon-moon {
+  display: none;
+}
+
+:root[data-theme='dark'] .theme-toggle .icon-sun {
+  display: block;
+}
+
+@media print {
+  .theme-toggle {
+    display: none;
+  }
+}
