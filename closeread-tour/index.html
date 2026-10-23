@@ -111,6 +111,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<!-- Apply the saved or system theme before first paint. Same logic and
+     storage key as the theme-init script in the site's app/layout.tsx, so
+     a choice made on either side of averysdavis.com carries over. -->
+<script>
+  (function () {
+    try {
+      var t = window.localStorage.getItem('theme');
+      if (t === 'dark' || t === 'light') {
+        document.documentElement.setAttribute('data-theme', t);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {}
+  })();
+</script>
 <script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <meta cr-debug-mode="false">
@@ -118,6 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
+<link rel="stylesheet" href="../theme/site-theme.css">
 <meta property="og:title" content="Closeread Feature Tour – Avery Davis">
 <meta property="og:description" content="A walkthrough of Closeread’s layouts, highlighting, zoom and scroll effects.">
 <meta property="og:site_name" content="Avery Davis">
@@ -139,17 +157,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-narrative-font-family: Georgia, serif;
+          --cr-narrative-border-radius: 2px;
 --cr-poem-font-family: Georgia, serif;
---cr-section-background-color: #ffffff;
---cr-narrative-background-color-overlay: #1f2937cc;
---cr-narrative-border-radius: 6px;
+--cr-narrative-font-size: 1.15rem;
 --cr-narrative-sidebar-width: 1fr;
 --cr-narrative-overlay-max-width: 40ch;
---cr-narrative-text-color-overlay: #f9fafb;
---cr-narrative-background-color-sidebar: #f3f4f6;
---cr-narrative-font-size: 1.15rem;
---cr-narrative-text-color-sidebar: #111827;
+--cr-narrative-font-family: Georgia, serif;
         }
       </style>
     
@@ -288,12 +301,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><code>scale-by="2"</code> scales the sticky by a factor.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2" data-focus-on="cr-map" data-pan-to="25%,25%">
+<div class="trigger new-trigger" data-focus-on="cr-map" data-pan-to="25%,25%" data-scale-by="2">
 <div class="narrative">
 <p><code>pan-to</code> moves it with a CSS translate. Here it moves to the top-left corner. </p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2" data-focus-on="cr-map" data-pan-to="-25%,-25%">
+<div class="trigger new-trigger" data-focus-on="cr-map" data-pan-to="-25%,-25%" data-scale-by="2">
 <div class="narrative">
 <p>And now to the bottom-right.</p>
 </div>
@@ -308,13 +321,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sticky-col-stack">
 <div id="cr-map" class="sticky">
 <svg viewbox="0 0 400 300" width="600" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="300" fill="#dbeafe"></rect>
-  <circle cx="80" cy="70" r="40" fill="#f59e0b"></circle>
-  <text x="80" y="75" text-anchor="middle" font-size="14">top-left</text>
-  <circle cx="320" cy="230" r="40" fill="#10b981"></circle>
-  <text x="320" y="235" text-anchor="middle" font-size="14">bottom-right</text>
-  <rect x="160" y="120" width="80" height="60" fill="#6366f1"></rect>
-  <text x="200" y="155" text-anchor="middle" font-size="14" fill="white">center</text>
+  <rect width="400" height="300" style="fill: var(--color-surface-hover); stroke: var(--color-border)"></rect>
+  <circle cx="80" cy="70" r="40" style="fill: var(--color-accent)"></circle>
+  <text x="80" y="75" text-anchor="middle" font-size="14" style="fill: var(--color-on-accent)">top-left</text>
+  <circle cx="320" cy="230" r="40" style="fill: var(--color-bg)"></circle>
+  <text x="320" y="234" text-anchor="middle" font-size="12" style="fill: var(--color-on-bg)">bottom-right</text>
+  <rect x="160" y="120" width="80" height="60" style="fill: var(--color-signal)"></rect>
+  <text x="200" y="155" text-anchor="middle" font-size="14" style="fill: var(--color-on-accent)">center</text>
 </svg>
 </div>
 </div>
@@ -368,11 +381,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="cr-progress" class="sticky">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="154" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 153;"><span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a><span class="fu">md</span><span class="vs">`**Active sticky:** </span><span class="sc">${</span>crActiveSticky<span class="sc">}</span></span>
-<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a><span class="vs">**Trigger index:** </span><span class="sc">${</span>crTriggerIndex<span class="sc">}</span></span>
-<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="vs">**Progress through this trigger:** </span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(crTriggerProgress <span class="op">*</span> <span class="dv">100</span>)<span class="sc">}</span><span class="vs">%`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="150" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 149;"><span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a><span class="fu">md</span><span class="vs">`**Active sticky:** </span><span class="sc">${</span>crActiveSticky<span class="sc">}</span></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a><span class="vs">**Trigger index:** </span><span class="sc">${</span>crTriggerIndex<span class="sc">}</span></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a><span class="vs">**Progress through this trigger:** </span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(crTriggerProgress <span class="op">*</span> <span class="dv">100</span>)<span class="sc">}</span><span class="vs">%`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="expression">
 
@@ -389,6 +402,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 
 </main> <!-- /main -->
+<!-- Light/dark toggle. Mirrors src/components/Template/ThemeToggle.tsx
+     on the site, including its icons and labels. -->
+<button type="button" class="theme-toggle" id="theme-toggle">
+  <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  </svg>
+</button>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var button = document.getElementById('theme-toggle');
+
+    function label() {
+      var text =
+        root.getAttribute('data-theme') === 'dark'
+          ? 'Switch to light mode'
+          : 'Switch to dark mode';
+      button.setAttribute('aria-label', text);
+      button.setAttribute('title', text);
+    }
+
+    button.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try {
+        window.localStorage.setItem('theme', next);
+      } catch (e) {}
+      label();
+    });
+
+    label();
+  })();
+</script>
 <script type="ojs-module-contents">
 eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Im1kYCoqQWN0aXZlIHN0aWNreToqKiAke2NyQWN0aXZlU3RpY2t5fVxuXG4qKlRyaWdnZXIgaW5kZXg6KiogJHtjclRyaWdnZXJJbmRleH1cblxuKipQcm9ncmVzcyB0aHJvdWdoIHRoaXMgdHJpZ2dlcjoqKiAke01hdGgucm91bmQoY3JUcmlnZ2VyUHJvZ3Jlc3MgKiAxMDApfSVgXG4ifV19
 </script>
