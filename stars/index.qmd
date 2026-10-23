@@ -1,0 +1,45 @@
+---
+title: A Maze of Stars
+description: "A scrollytelling reading of Bingxin's 繁星 (A Maze of Stars)."
+format:
+  closeread-html:
+    # Set to true to show trigger/sticky outlines while you build the story
+    debug-mode: false
+    remove-header-space: false
+    # Default layout for every cr-section (override per section with layout="...")
+    # Options: sidebar-left, sidebar-right, overlay-left, overlay-center, overlay-right
+    cr-section:
+      layout: sidebar-left
+    # Colours come from theme/site-theme.css; set only sizing and type here.
+    cr-style:
+      narrative-font-family: "Georgia, serif"
+      narrative-font-size: 1.15rem
+      narrative-sidebar-width: 1fr
+      narrative-border-radius: 2px
+      narrative-overlay-max-width: 40ch
+      poem-font-family: "Georgia, serif"
+---
+
+<!-- Introduction: ordinary text that scrolls normally. -->
+
+Introduction goes here.
+
+# Section one
+
+:::{.cr-section}
+
+First narrative paragraph. Ending it with a trigger brings the poem into view. @cr-poem-1
+
+Highlight a line by its number. [@cr-poem-1]{highlight="2"}
+
+Highlight and zoom to a line in one step. [@cr-poem-1]{hlz="3"}
+
+:::{#cr-poem-1}
+| Poem line one
+| Poem line two
+| Poem line three
+:::
+
+:::
+
+Closing text goes here.

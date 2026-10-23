@@ -294,7 +294,7 @@ code span.er {
 }
 
 .cr-section .sticky-col .sticky-col-stack .sticky:has(.line-block)[style*='matrix'] {
-  scale: 0.7;
+  scale: 0.6;
 }
 
 /* ===================
