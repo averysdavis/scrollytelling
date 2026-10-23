@@ -1,0 +1,33 @@
+---
+format:
+    closeread-html:
+        embed-resources: true
+
+---
+
+:::{.cr-section}
+
+Closeread lets you pin content in a sticky column while narrative text scrolls past. @cr-poem
+
+The sticky element stays in view as you read. Here we highlight the first line. [@cr-poem]{highlight="1"}
+
+And now we zoom into the last two lines. [@cr-poem]{highlight="3-4" zoom-to="3"}
+
+:::{#cr-poem}
+| Two roads diverged in a yellow wood,
+| And sorry I could not travel both
+| And be one traveler, long I stood
+| And looked down one as far as I could
+:::
+
+Next, a different sticky: a simple diagram. @cr-box
+
+:::{#cr-box}
+```
++---------+      +---------+
+|  Text   | ---> | Sticky  |
++---------+      +---------+
+```
+:::
+
+:::
