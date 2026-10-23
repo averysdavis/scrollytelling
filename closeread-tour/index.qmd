@@ -1,5 +1,6 @@
 ---
 title: Closeread Feature Tour
+description: "A walkthrough of Closeread's layouts, highlighting, zoom and scroll effects."
 format:
   closeread-html:
     # Set to true to show trigger/sticky outlines while you build a story

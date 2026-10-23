@@ -1,0 +1,14 @@
+project:
+  type: website
+
+website:
+  title: "Avery Davis"
+  site-url: https://averysdavis.com/scrollytelling/
+  open-graph: true
+  twitter-card: true
+
+execute:
+  freeze: auto
+
+format:
+  closeread-html: default
