@@ -232,6 +232,24 @@ h6,
   font-family: var(--font-latin), serif;
 }
 
+/* Room between annotated characters so neighbouring pinyin doesn't run
+   together; plain Chinese keeps its normal set width */
+:lang(zh) ruby {
+  margin-inline: 0.2em;
+}
+
+/* Pinyin sits in the gap above each line, so poems with ruby need taller
+   lines to keep it clear of the line before */
+:lang(zh) .line-block:has(ruby) {
+  line-height: 2.4;
+}
+
+/* The interpunct in titles like 《繁星·一》 is set narrow by the font;
+   wrap it as [·]{.interpunct} to give it room */
+.interpunct {
+  margin-inline: 0.25em;
+}
+
 /* After :lang(zh), which also matches these tags */
 :lang(zh-Hant),
 :lang(zh-TW),
