@@ -1,6 +1,6 @@
 ---
-title: A Maze of Stars
-description: "A scrollytelling reading of Bingxin's 繁星 (A Maze of Stars)."
+title: Fanxing
+description: "Bingxin's [繁星]{lang=\"zh-CN\"} (Vast Stars)."
 format:
   closeread-html:
     # Set to true to show trigger/sticky outlines while you build the story
@@ -10,14 +10,17 @@ format:
     # Options: sidebar-left, sidebar-right, overlay-left, overlay-center, overlay-right
     cr-section:
       layout: sidebar-left
-    # Colours come from theme/site-theme.css; set only sizing and type here.
+    # Colors come from theme/site-theme.css; set only sizing and type here.
+    # var(--font-zh) (theme/site-theme.css) catches any Chinese not tagged
+    # lang="zh-CN"; it follows the Latin faces so English stays in Baskerville.
+    # Backticks stop Pandoc turning the quotes and "--" into typography.
     cr-style:
-      narrative-font-family: "Georgia, serif"
+      narrative-font-family: "`var(--font-latin), var(--font-zh), serif`"
       narrative-font-size: 1.15rem
       narrative-sidebar-width: 1fr
       narrative-border-radius: 2px
       narrative-overlay-max-width: 40ch
-      poem-font-family: "Georgia, serif"
+      poem-font-family: "`var(--font-latin), var(--font-zh), serif`"
 ---
 
 <!-- Introduction: ordinary text that scrolls normally. -->
@@ -32,12 +35,25 @@ First narrative paragraph. Ending it with a trigger brings the poem into view. @
 
 Highlight a line by its number. [@cr-poem-1]{highlight="2"}
 
-Highlight and zoom to a line in one step. [@cr-poem-1]{hlz="3"}
+Highlight and zoom to a line in one step. This trigger swaps in the second poem. [@cr-poem-2]{hlz="3"}
 
-:::{#cr-poem-1}
-| Poem line one
-| Poem line two
-| Poem line three
+:::{#cr-poem-1 lang="zh-CN"}
+| 繁星闪烁着——
+| 深蓝的太空，
+| 何曾听得见它们对语？
+| 沉默中，
+| 微光里，
+| 它们深深的互相颂赞了？
+:::
+
+:::{#cr-poem-2 lang="zh-CN"}
+<!-- Pinyin as ruby text, one <ruby> per character -->
+| <ruby>繁<rt>fán</rt></ruby><ruby>星<rt>xīng</rt></ruby><ruby>闪<rt>shǎn</rt></ruby><ruby>烁<rt>shuò</rt></ruby><ruby>着<rt>zhe</rt></ruby>——
+| <ruby>深<rt>shēn</rt></ruby><ruby>蓝<rt>lán</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>太<rt>tài</rt></ruby><ruby>空<rt>kōng</rt></ruby>，
+| <ruby>何<rt>hé</rt></ruby><ruby>曾<rt>céng</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>见<rt>jiàn</rt></ruby><ruby>它<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>对<rt>duì</rt></ruby><ruby>语<rt>yǔ</rt></ruby>？
+| <ruby>沉<rt>chén</rt></ruby><ruby>默<rt>mò</rt></ruby><ruby>中<rt>zhōng</rt></ruby>，
+| <ruby>微<rt>wēi</rt></ruby><ruby>光<rt>guāng</rt></ruby><ruby>里<rt>lǐ</rt></ruby>，
+| <ruby>它<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>深<rt>shēn</rt></ruby><ruby>深<rt>shēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>互<rt>hù</rt></ruby><ruby>相<rt>xiāng</rt></ruby><ruby>颂<rt>sòng</rt></ruby><ruby>赞<rt>zàn</rt></ruby><ruby>了<rt>le</rt></ruby>？
 :::
 
 :::

@@ -1,5 +1,13 @@
 project:
   type: website
+  # Rebuild the Chinese font subsets from the characters in the stories
+  pre-render: theme/subset-chinese.py
+  resources:
+    - theme/fonts/zh-sc-subset.woff2
+    - theme/fonts/zh-tc-subset.woff2
+    - theme/fonts/LibreBaskerville-VF.ttf
+    - theme/fonts/LibreBaskerville-Italic-VF.ttf
+    - theme/fonts/LibreBaskerville-OFL.txt
 
 website:
   title: "Avery Davis"

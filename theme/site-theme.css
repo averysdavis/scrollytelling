@@ -153,6 +153,94 @@ h6,
 }
 
 /* ===================
+   LATIN TYPE
+   English is set in Libre Baskerville (SIL OFL; licence in
+   fonts/LibreBaskerville-OFL.txt), served from the site so it looks the
+   same everywhere. The files are the unmodified upstream variable fonts,
+   400-700, because the OFL reserves the name for unaltered copies.
+   =================== */
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('fonts/LibreBaskerville-VF.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('fonts/LibreBaskerville-Italic-VF.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ===================
+   CHINESE TYPE
+   Chinese is set in Source Han Serif, served from the site so it holds
+   on every device. Simplified (SC) is the default; text tagged
+   lang="zh-Hant" (or zh-TW, zh-HK) uses Traditional (TC), which draws
+   the regional forms. Each file is a subset holding only the characters
+   the stories use; theme/subset-chinese.py rebuilds them before each
+   render. Installed Song/Ming faces are only a fallback.
+
+   unicode-range keeps the faces to Chinese characters and punctuation,
+   so they never replace a Latin font. Tagged text uses them first;
+   elsewhere they follow the Latin fonts and pick up the Chinese
+   characters those lack.
+   =================== */
+@font-face {
+  font-family: 'Source Han Serif SC Web';
+  src: url('fonts/zh-sc-subset.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  /* Keep in step with RANGES in subset-chinese.py */
+  unicode-range: U+00B7, U+2014-2026, U+2E80-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF,
+    U+20000-2FA1F;
+}
+
+@font-face {
+  font-family: 'Source Han Serif TC Web';
+  src: url('fonts/zh-tc-subset.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+00B7, U+2014-2026, U+2E80-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF,
+    U+20000-2FA1F;
+}
+
+:root {
+  --font-zh: 'Source Han Serif SC Web', 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', STSong,
+    SimSun;
+  --font-zh-hant: 'Source Han Serif TC Web', 'Noto Serif TC', 'Source Han Serif TC', 'Songti TC',
+    PMingLiU, MingLiU;
+  /* Installed serifs only cover the moment before the web font loads */
+  --font-latin: 'Libre Baskerville', Baskerville, Georgia, 'Times New Roman';
+  --bs-body-font-family: var(--font-latin), var(--font-zh), serif;
+}
+
+:lang(zh) {
+  font-family: var(--font-zh), serif;
+  /* closeread sets the poem face on the sticky itself, so the tag has
+     to reach it through the variable */
+  --cr-poem-font-family: var(--font-zh), serif;
+}
+
+/* Pinyin is Latin, so ruby text over Chinese takes the Latin face */
+:lang(zh) rt {
+  font-family: var(--font-latin), serif;
+}
+
+/* After :lang(zh), which also matches these tags */
+:lang(zh-Hant),
+:lang(zh-TW),
+:lang(zh-HK) {
+  font-family: var(--font-zh-hant), serif;
+  --cr-poem-font-family: var(--font-zh-hant), serif;
+}
+
+/* ===================
    PINK STRUCTURE
    The site's accent carries structure and emphasis: the rule that closes
    the title block, the edges of narrative panels, and whatever a trigger
