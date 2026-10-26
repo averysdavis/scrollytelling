@@ -23,11 +23,63 @@ format:
       poem-font-family: "`var(--font-latin), var(--font-zh), serif`"
 ---
 
-<!-- Introduction: ordinary text that scrolls normally. -->
+<!-- Placeholder outline. Sections 2-5 become cr-sections once they have
+     stickies; 1 and 6 stay ordinary scrolling text. -->
 
-Introduction goes here.
+<!-- 1. Introduction: ordinary text that scrolls normally. -->
 
-# Section one
+- Hook
+- What the page does: one six-line poem, three translations, what each gains and loses
+
+# Bingxin and 繁星
+
+<!-- Planned layout: overlay-center, sticky is a photo, period image or timeline -->
+
+- 1900, Fuzhou
+- May Fourth era and writing in the vernacular (白话)
+- Fragments jotted down 1919–21, inspired by Tagore's *Stray Birds*
+- Published 1923; the short-poem (小诗) craze it started
+- Her "philosophy of love" (爱的哲学): mother, child, sea, stars
+
+# The poem in Chinese
+
+<!-- Planned: the two poem stickies, plain and with pinyin -->
+
+- The dash that opens the poem onto empty space
+- The rhetorical question 何曾…？
+- The paired settings 沉默中 / 微光里
+- The stair-step indents
+
+# Three translations
+
+<!-- Planned: one sticky per translation, read whole, no analysis yet -->
+
+- Translation 1: translator, year, one line on their approach
+- Translation 2: translator, year, one line on their approach
+- Translation 3: translator, year, one line on their approach
+
+# Word by word
+
+<!-- Planned: one sticky per line (Chinese + pinyin, gloss, the line in all
+     three translations), words as named spans highlighted together, e.g.
+     [@cr-line1]{highlight="cr-zhe,cr-t1-zhe,cr-t2-zhe,cr-t3-zhe"} -->
+
+- Line 1: 繁 (multitude, not just "many"); 着 (ongoing action)
+- Line 2: overview
+- Line 3: 何曾; 听得见 (whether it *can* be heard); 对语 (speaking with each other)
+- Line 4: overview
+- Line 5: overview
+- Line 6: 深深的 (doubled, used as an adverb); 互相 (mutual); 了 completed action
+
+# Side by side
+
+<!-- Ordinary scrolling text -->
+
+- Three-column table of the full translations
+- Patterns: who keeps the questions, who keeps the silence, what none could carry over
+- Closing prompt: try your own translation of line 3
+
+# The poems
 
 :::{.cr-section}
 
