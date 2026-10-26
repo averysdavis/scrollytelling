@@ -37,6 +37,12 @@ Highlight a line by its number. [@cr-poem-og]{highlight="2"}
 
 Highlight and zoom to a line in one step. This trigger swaps in the second poem. [@cr-poem-py]{hlz="3"}
 
+My English translation. @cr-poem-dav
+
+Cayley and Boynton translation. @cr-poem-cay-boy
+
+Lin translation. @cr-poem-lin
+
 :::{#cr-poem-og lang="zh-CN"}
 <!-- Outside the line block, so highlight line numbers still count from the poem -->
 冰心《繁星[·]{.interpunct}一》
@@ -46,7 +52,7 @@ Highlight and zoom to a line in one step. This trigger swaps in the second poem.
 | 　何曾听得见它们对语？
 | 沉默中，
 | 　微光里，
-| 　　它们深深的互相颂赞了？
+| 　　它们深深的互相颂赞了。
 :::
 
 :::{#cr-poem-py lang="zh-CN"}
@@ -58,7 +64,43 @@ Highlight and zoom to a line in one step. This trigger swaps in the second poem.
 | 　<ruby>何<rt>hé</rt></ruby><ruby>曾<rt>céng</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>见<rt>jiàn</rt></ruby><ruby>它<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>对<rt>duì</rt></ruby><ruby>语<rt>yǔ</rt></ruby>？
 | <ruby>沉<rt>chén</rt></ruby><ruby>默<rt>mò</rt></ruby><ruby>中<rt>zhōng</rt></ruby>，
 | 　<ruby>微<rt>wēi</rt></ruby><ruby>光<rt>guāng</rt></ruby><ruby>里<rt>lǐ</rt></ruby>，
-| 　　<ruby>它<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>深<rt>shēn</rt></ruby><ruby>深<rt>shēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>互<rt>hù</rt></ruby><ruby>相<rt>xiāng</rt></ruby><ruby>颂<rt>sòng</rt></ruby><ruby>赞<rt>zàn</rt></ruby><ruby>了<rt>le</rt></ruby>？
+| 　　<ruby>它<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>深<rt>shēn</rt></ruby><ruby>深<rt>shēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>互<rt>hù</rt></ruby><ruby>相<rt>xiāng</rt></ruby><ruby>颂<rt>sòng</rt></ruby><ruby>赞<rt>zàn</rt></ruby><ruby>了<rt>le</rt></ruby>。
+:::
+
+:::{#cr-poem-dav  lang="en"}
+<!-- Outside the line block, so highlight line numbers still count from the poem -->
+Vast Stars (1) by Bingxin
+
+| Vast stars twinkle continuously—
+| 　Deep blue space,
+| 　Were their words ever heard?
+| Within silence,
+| 　In the glimmer,
+| 　　They have deeply, mutually chanted praises.
+:::
+
+:::{#cr-poem-cay-boy  lang="en"}
+<!-- Outside the line block, so highlight line numbers still count from the poem -->
+A Maze of Stars (1) by Bingxin
+
+| A maze of stars glistens
+| in the deep azure vault of sky.
+| When before have I overheard their whispers?
+| In the profound silence,
+| in their own faint light,
+| this deep acknowledgment of one another.
+:::
+
+:::{#cr-poem-lin  lang="en"}
+<!-- Outside the line block, so highlight line numbers still count from the poem -->
+Infinite Stars (1) by Bingxin
+
+| Infinite stars sparkle
+| 　In the deep blues of sky
+| 　Does anyone ever hear them talk?
+| In the depths of silence
+| 　Within this faint light
+| 　　They brightly sing one another's praise.
 :::
 
 :::
