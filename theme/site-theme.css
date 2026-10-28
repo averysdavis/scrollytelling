@@ -19,12 +19,18 @@
   --color-fg-bold: #1c2414;
   --color-fg-light: #2c3a22;
 
-  --color-accent: #7f3d5c;
-  --color-accent-rgb: 127, 61, 92;
-  --color-accent-hover: #a65078;
-  --color-accent-hover-rgb: 166, 80, 120;
+  /* Trying a richer pink than the main site's #7f3d5c (hover #a65078):
+     6.3:1 on the page, 5.9:1 on sidebar panels. Hover goes darker so it
+     still reads as a change. */
+  --color-accent: #ad1457;
+  --color-accent-rgb: 173, 20, 87;
+  --color-accent-hover: #7a0d3d;
+  --color-accent-hover-rgb: 122, 13, 61;
 
   --color-signal: #561e38;
+
+  /* Rules between poems in a grid, in the dimmed-text colour */
+  --color-rule: var(--color-text-dim);
 
   /* Pink band behind highlighted code lines. Capped at 10% so every
      syntax colour keeps 4.5:1 on top of it. */
@@ -73,6 +79,8 @@
   --color-accent-hover-rgb: 255, 200, 223;
 
   --color-signal: #eeaac6;
+
+  --color-rule: var(--color-text-dim);
 
   --color-border: rgba(255, 255, 255, 0.12);
   --color-border-alt: rgba(255, 255, 255, 0.2);
@@ -435,11 +443,11 @@ code span.er {
 
 /* Rule down the middle and across between the rows */
 .poem-grid > :nth-child(even) {
-  border-left: 1px solid var(--color-accent);
+  border-left: 1px solid var(--color-rule);
 }
 
 .poem-grid > :nth-child(n + 3) {
-  border-top: 1px solid var(--color-accent);
+  border-top: 1px solid var(--color-rule);
 }
 
 .poem-grid .line-block {
@@ -472,7 +480,7 @@ code span.er {
   }
 
   .poem-grid > :nth-child(n + 2) {
-    border-top: 1px solid var(--color-accent);
+    border-top: 1px solid var(--color-rule);
   }
 }
 
@@ -495,19 +503,123 @@ code span.er {
   border-top: none;
 }
 
-/* A short centred rule rather than one the full width of the column */
-.poem-stack > :nth-child(n + 2)::before {
+/* Rules between the translations reach just past both sides of the text */
+.poem-stack > :nth-child(n + 2)::before,
+.poem-side-translations > :nth-child(n + 2)::before {
   content: '';
   display: block;
-  width: 60%;
-  margin: 0 auto 0.75rem;
-  border-top: 1px solid var(--color-accent);
+  margin: 0 -0.5rem 0.75rem;
+  border-top: 1px solid var(--color-rule);
 }
 
 @media (max-width: 600px) {
   .cr-section .sticky-col .sticky-col-stack .sticky.poem-stack {
     font-size: 0.75rem;
   }
+}
+
+/* Large screens: two translations side by side with a rule between, the
+   third centred beneath them */
+@media (min-width: 1200px) {
+  .cr-section .sticky-col .sticky-col-stack .sticky.poem-stack {
+    grid-template-columns: repeat(2, max-content);
+  }
+
+  .poem-stack > * {
+    padding: 0.75rem 2rem;
+  }
+
+  .poem-stack > :nth-child(2) {
+    border-left: 1px solid var(--color-rule);
+  }
+
+  .poem-stack > :nth-child(2)::before {
+    content: none;
+  }
+
+  /* The third spans both columns so its rule runs under the whole top
+     row, ending just past the text on either side; an inner grid keeps
+     the poem centred with its lines flush left */
+  .poem-stack > :nth-child(3) {
+    grid-column: 1 / -1;
+    display: grid;
+    justify-content: center;
+    margin-inline: 1.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .poem-stack > :nth-child(3)::before {
+    content: none;
+  }
+}
+
+/* The original on the left and the three translations stacked on the
+   right, divided by a pink rule; all four stacked on narrow screens */
+.cr-section .sticky-col .sticky-col-stack .sticky.poem-side {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.poem-side > :first-child {
+  padding-right: 2rem;
+  font-size: 1.2em;
+}
+
+.poem-side > .poem-side-translations {
+  padding-left: 2rem;
+  border-left: 1px solid var(--color-rule);
+}
+
+.poem-side .line-block {
+  margin-bottom: 0;
+}
+
+.poem-side-translations > * {
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 900px) {
+  .cr-section .sticky-col .sticky-col-stack .sticky.poem-side {
+    grid-template-columns: max-content;
+    font-size: 0.75rem;
+  }
+
+  .poem-side > :first-child {
+    padding: 0 0 0.75rem;
+  }
+
+  .poem-side > .poem-side-translations {
+    padding: 0.75rem 0 0;
+    border-left: none;
+    border-top: 1px solid var(--color-rule);
+  }
+}
+
+/* Source Han draws the em dash as a hairline under a pixel thick, which
+   blends with the page and looks darker than the Latin dash beside it when
+   highlighted. A slight stroke brings it up to the Latin weight. Mark CJK
+   dashes that sit next to Latin ones as [——]{.cjk-dash}. */
+.cjk-dash {
+  -webkit-text-stroke: 0.2px currentColor;
+}
+
+/* Highlighted dashes ([—]{.dash}) go bold. Bold alone barely thickens a
+   dash (Baskerville 1.2px to 1.3px, and Source Han has no bold), so a
+   stroke takes both to about 2.2px, matched so neither looks heavier.
+   Synthetic bold is off for the Chinese dash so the stroke sets its
+   weight exactly. */
+.cr-section .sticky-col .sticky-col-stack .cr-hl-within .dash.cr-hl {
+  font-weight: 700;
+  -webkit-text-stroke: 0.45px currentColor;
+}
+
+.cr-section .sticky-col .sticky-col-stack .cr-hl-within .dash.cjk-dash.cr-hl {
+  font-synthesis: none;
+  -webkit-text-stroke: 0.68px currentColor;
 }
 
 /* ===================
@@ -543,6 +655,13 @@ code span.er {
 
 .cr-section .sticky-col .sticky-col-stack .cr-active.cr-hl-within div.line-block span[id^='lb'] {
   color: var(--color-text-dim);
+}
+
+/* Poem titles sit outside the line blocks, so closeread leaves them at
+   full ink; dim them with the lines */
+.cr-section .sticky-col .sticky-col-stack .cr-active.cr-hl-within p {
+  color: var(--color-text-dim);
+  transition: color linear 0.3s;
 }
 
 .cr-section .sticky-col .sticky-col-stack .cr-active.cr-hl-within div.line-block span[id^='lb'].cr-hl,

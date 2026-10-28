@@ -1,6 +1,6 @@
 ---
 title: Fanxing
-description: "Bingxin's [繁星]{lang=\"zh-CN\"} (Vast Stars)."
+description: "Bing Xin's [繁星]{lang=\"zh-CN\"} (Vast Stars)."
 format:
   closeread-html:
     # Set to true to show trigger/sticky outlines while you build the story
@@ -23,85 +23,69 @@ format:
       poem-font-family: "`var(--font-latin), var(--font-zh), serif`"
 ---
 
-<!-- Placeholder outline. Sections 2-5 become cr-sections once they have
-     stickies; 1 and 6 stay ordinary scrolling text. -->
-
-<!-- 1. Introduction: ordinary text that scrolls normally. -->
-
-- Hook
-- What the page does: one six-line poem, three translations, what each gains and loses
-
-# Bingxin and 繁星
-
-<!-- Planned layout: overlay-center, sticky is a photo, period image or timeline -->
-
-- 1900, Fuzhou
-- May Fourth era and writing in the vernacular (白话)
-- Fragments jotted down 1919–21, inspired by Tagore's *Stray Birds*
-- Published 1923; the short-poem (小诗) craze it started
-- Her "philosophy of love" (爱的哲学): mother, child, sea, stars
-
-# The poem in Chinese
-
-<!-- Planned: the two poem stickies, plain and with pinyin -->
-
-- The dash that opens the poem onto empty space
-- The rhetorical question 何曾…？
-- The paired settings 沉默中 / 微光里
-- The stair-step indents
-
-# Three translations
-
-<!-- Planned: one sticky per translation, read whole, no analysis yet -->
-
-- Translation 1: translator, year, one line on their approach
-- Translation 2: translator, year, one line on their approach
-- Translation 3: translator, year, one line on their approach
-
-# Word by word
-
-<!-- Planned: one sticky per line (Chinese + pinyin, gloss, the line in all
-     three translations), words as named spans highlighted together, e.g.
-     [@cr-line1]{highlight="cr-zhe,cr-t1-zhe,cr-t2-zhe,cr-t3-zhe"} -->
-
-- Line 1: 繁 (multitude, not just "many"); 着 (ongoing action)
-- Line 2: overview
-- Line 3: 何曾; 听得见 (whether it *can* be heard); 对语 (speaking with each other)
-- Line 4: overview
-- Line 5: overview
-- Line 6: 深深的 (doubled, used as an adverb); 互相 (mutual); 了 completed action
-
-# Side by side
-
-<!-- Ordinary scrolling text -->
-
-- Three-column table of the full translations
-- Patterns: who keeps the questions, who keeps the silence, what none could carry over
-- Closing prompt: try your own translation of line 3
-
-# The poems
-
 :::{.cr-section}
 
-First narrative paragraph. Ending it with a trigger brings the poem into view. @cr-poem-og
+Context @cr-poem-og
 
-Highlight a line by its number. [@cr-poem-og]{highlight="2"}
+Here are three different translations to try and get at the meaning. The first translation is my own and prioritizes the meaning a Chinese reader would get while sacrificing the experience of an English reader. The second is by John Cayley and Grace Boynton and is quite an experience for the English reader but adds meaning not in the original Chinese. The third is by Julia C. Lin retains the simple, conciseness of the original but again adds its own meaning. @cr-poem-grid-en
 
-Highlight and zoom to a line in one step. This trigger swaps in the second poem. [@cr-poem-py]{hlz="4"}
+And a word by word translation to see the meaning as a Chinese reader would. The square brackets \[\] indicate a grammatical term. @cr-poem-gloss
 
-My English translation. @cr-poem-dav
+<ruby lang="zh-CN">繁<rt>fán</rt></ruby>: The three translations translate <ruby lang="zh-CN">繁<rt>fán</rt></ruby> three ways: vast, a maze of, and infinite. <ruby lang="zh-CN">繁<rt>fán</rt></ruby> means many, dense, and intricate, with no English word containing all meanings. [@cr-poem-grid-en]{highlight="dav-fan,cb-fan,lin-fan"}
 
-Cayley and Boynton translation. @cr-poem-cay-boy
+<ruby lang="zh-CN">着<rt>zhe</rt></ruby>: Chinese verbs don’t conjugate to carry tense, so tenses, unlike in English, are optional. Tenses are often indicated with additional, optional grammatical markings. <ruby lang="zh-CN">着<rt>zhe</rt></ruby> is one of them, and marks an ongoing action. What is a one-syllable marker in Chinese is either dropped in translation, or translated as "continuously," adding length the original did not have. [@cr-poem-grid-en]{highlight="dav-zhe,cb-zhe,lin-zhe"}
 
-Lin translation. @cr-poem-lin
+The dash leaves the line open, but only one translation includes it. [@cr-poem-side]{highlight="s-zh-dash,s-dav-dash"}
 
-Test. [@cr-poem-lin]{highlight="3"}
+The entire line is a noun phrase. The <ruby lang="zh-CN">的<rt>de</rt></ruby> is merely a grammatical character indicating that deep blue (深蓝) is an adjective modifying the noun expanse (太空). [@cr-poem-gloss]{highlight="2"}
 
-All three translations do not recreate the spacing of the original. @cr-poem-grid
+The term <ruby lang="zh-CN">太<rt>tài</rt>空<rt>kōng</rt></ruby> would be understood by a modern Chinese reader as “outer space”, but an early 20th century would understand it as “expanse” but with a plainer connotation than the English word. [@cr-poem-gloss]{highlight="g-taikong"}
 
-The three translations together. @cr-poem-grid-en
+Chinese does not differentiate between single and plural nouns, therefore the line could be translated as “deep blue expanse” or “deep blue expanse**s**.” [@cr-poem-gloss]{highlight="2"}
 
-Word for word. @cr-poem-gloss
+The parataxis in Chinese is very concise and plain while leaving the relation unstated. The first translation recreates the simplicity, but loses some of the connection to the rest of the poem. The second and third translations set out to capture the feeling of the original by spelling the relation out but in turn loses the simpleness of an isolated phrase. [@cr-poem-grid-en]{highlight="dav-2,cb-2,lin-2"}
+
+Chinese grammar creates an ambiguity that English cannot. The original Chinese line has no subject. This shifts focus from whoever could or could not hear the dialogues to the creators of the dialogues themselves. The closest English can get to this is using passive voice, like in the first translation, to shift the focus. [@cr-poem-gloss]{highlight="3"}
+
+The term <ruby lang="zh-CN">何<rt>hé</rt>曾<rt>céng</rt></ruby> is a classical rhetorical marker. This contrasts the previous lines of the poem with its modern vernacular. [@cr-poem-gloss]{highlight="g-heceng"}
+
+<ruby lang="zh-CN">听<rt>tīng</rt>得<rt>de</rt>见<rt>jiàn</rt></ruby> doesn’t ask if the dialogues were heard but whether hearing them is possible. [@cr-poem-gloss]{highlight="g-tingdejian"}
+
+<ruby lang="zh-CN">对<rt>duì</rt>语<rt>yǔ</rt></ruby> is an unusual word choice. The more common, conversational term for dialogue or conversation would be <ruby lang="zh-CN">对<rt>duì</rt>话<rt>huà</rt></ruby>. <ruby lang="zh-CN">对<rt>duì</rt>语<rt>yǔ</rt></ruby> gives a more literary feel, again making this line feel more formal and older than the rest of the poem. Additionally, <ruby lang="zh-CN">对<rt>duì</rt></ruby> means face-to-face or reciprocal, suggesting the dialogues are mutual. [@cr-poem-gloss]{highlight="g-duiyu"}
+
+<ruby lang="zh-CN">它<rt>tā</rt>们<rt>men</rt></ruby> means “they” in English, but in Chinese indicates that the “they” are not human. While pronounced the same, Chinese uses <ruby lang="zh-CN">他<rt>tā</rt>们<rt>men</rt></ruby> for human “theys” and <ruby lang="zh-CN">它<rt>tā</rt>们<rt>men</rt></ruby> for animals or inanimate “theys.” [@cr-poem-gloss]{highlight="g-tamen-a"}
+
+None of the translations recreate the contrasting literaryness of this line, and the second and third translations add subjects not mentioned in the original. [@cr-poem-grid-en]{highlight="dav-3,cb-3,lin-3"}
+
+Lines three and four have parallel three-character phrases with a noun plus a version of “inside” (中/里). Silence is about sound and glimmer about light, so the poem moves from hearing to seeing. [@cr-poem-gloss]{highlight="g-zhong,g-li"}
+
+It answers the rhetorical question of line three: the stars’ conversations are not heard, instead they are in silence and light. [@cr-poem-gloss]{highlight="4-5"}
+
+<ruby lang="zh-CN">沉<rt>chén</rt>默<rt>mò</rt></ruby> is an interesting term. <ruby lang="zh-CN">沉<rt>chén</rt></ruby> by itself can mean to sink or submerge (into water), to indulge or to give into, dark or gloomy, or long and prolonged. <ruby lang="zh-CN">默<rt>mò</rt></ruby> by itself can mean to be silent or secretly. When combined, the phrase <ruby lang="zh-CN">沉<rt>chén</rt>默<rt>mò</rt></ruby> evokes a feeling of weighted, consuming silence, not just the lack of sound. [@cr-poem-gloss]{highlight="g-chenmo"}
+
+On its own, <ruby lang="zh-CN">微<rt>wēi</rt></ruby> can mean tiny, faint, waning, or obscure. <ruby lang="zh-CN">光<rt>guāng</rt></ruby> means light as a substance, not brightness. When combined, <ruby lang="zh-CN">微<rt>wēi</rt>光<rt>guāng</rt></ruby> means a faint light that feels like it’s barely there. [@cr-poem-gloss]{highlight="g-weiguang"}
+
+<ruby lang="zh-CN">中<rt>zhōng</rt></ruby> and <ruby lang="zh-CN">里<rt>lǐ</rt></ruby> both mean “in” or “within,” but <ruby lang="zh-CN">中<rt>zhōng</rt></ruby> marks an abstract, enclosed space (as silence is a condition you are inside of) while <ruby lang="zh-CN">里<rt>lǐ</rt></ruby> marks a more concrete area (as faint light is a substance you are surrounded by). Bing Xin’s choice of <ruby lang="zh-CN">中<rt>zhōng</rt></ruby> for <ruby lang="zh-CN">沉<rt>chén</rt>默<rt>mò</rt></ruby> and <ruby lang="zh-CN">里<rt>lǐ</rt></ruby> for <ruby lang="zh-CN">微<rt>wēi</rt>光<rt>guāng</rt></ruby> is deliberate asymmetry. The English words “in” and “within” only hints at this, and the phonetic contrast is lost. [@cr-poem-grid-en]{highlight="dav-zhong,dav-li,cb-zhong,cb-li,lin-zhong,lin-li"}
+
+Again, Bing Xin uses <ruby lang="zh-CN">它<rt>tā</rt>们<rt>men</rt></ruby>, specifying that the stars are not people. This is in contrast to the personification that immediately follows. [@cr-poem-gloss]{highlight="g-tamen-b"}
+
+For a second time, we see the character <ruby lang="zh-CN">深<rt>shēn</rt></ruby>, meaning deep. In this instance, it is doubled, making it heavier and slower than its first use while describing the depth of praises. [@cr-poem-gloss]{highlight="g-shen-a,g-shenshen"}
+
+<ruby lang="zh-CN">互<rt>hù</rt>相<rt>xiāng</rt></ruby>, meaning mutually, reminds readers again that the stars’ conversations are reciprocal with each other. [@cr-poem-gloss]{highlight="g-huxiang"}
+
+<ruby lang="zh-CN">颂<rt>sòng</rt>赞<rt>zàn</rt></ruby>, like in line three, changes the poem’s register from plain and simple again. <ruby lang="zh-CN">颂<rt>sòng</rt>赞<rt>zàn</rt></ruby>, meaning to praise or extol, is liturgical. The stars’ praises are devotional worship. [@cr-poem-gloss]{highlight="g-songzan"}
+
+<ruby lang="zh-CN">了<rt>le</rt></ruby> indicates the worship is complete, and the action is no longer ongoing. [@cr-poem-gloss]{highlight="g-le"}
+
+Again, we get another answer to the question in line three: the stars are not heard, but they have spoken and their speech is deep, mutual worship. [@cr-poem-gloss]{highlight="6"}
+
+All the English translations have a lot of active language. @cr-poem-grid-en
+
+The original Chinese, however, has a much more passive feel. Chinese has a tendency to drop the subjects of sentences, meaning everything happening isn’t caused by anything or anyone in particular. @cr-poem-og
+
+Summary of poem
+
+Thesis
 
 :::{#cr-poem-og lang="zh-CN"}
 <!-- Outside the line block, so highlight line numbers still count from the poem -->
@@ -115,96 +99,87 @@ Word for word. @cr-poem-gloss
 | 　　它们深深的互相颂赞了。
 :::
 
-:::{#cr-poem-py lang="zh-CN"}
-<!-- Pinyin as ruby text, one <ruby> per character -->
-<ruby>冰<rt>Bīng</rt></ruby><ruby>心<rt>xīn</rt></ruby>《<ruby>繁<rt>Fán</rt></ruby><ruby>星<rt>xīng</rt></ruby>·<ruby>一<rt>yī</rt></ruby>》
-
-| <ruby>繁<rt>fán</rt></ruby><ruby>星<rt>xīng</rt></ruby><ruby>闪<rt>shǎn</rt></ruby><ruby>烁<rt>shuò</rt></ruby><ruby>着<rt>zhe</rt></ruby>——
-| 　<ruby>深<rt>shēn</rt></ruby><ruby>蓝<rt>lán</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>太<rt>tài</rt></ruby><ruby>空<rt>kōng</rt></ruby>，
-| 　<ruby>何<rt>hé</rt></ruby><ruby>曾<rt>céng</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>见<rt>jiàn</rt></ruby><ruby>它<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>对<rt>duì</rt></ruby><ruby>语<rt>yǔ</rt></ruby>？
-| <ruby>沉<rt>chén</rt></ruby><ruby>默<rt>mò</rt></ruby><ruby>中<rt>zhōng</rt></ruby>，
-| 　<ruby>微<rt>wēi</rt></ruby><ruby>光<rt>guāng</rt></ruby><ruby>里<rt>lǐ</rt></ruby>，
-| 　　<ruby>它<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>深<rt>shēn</rt></ruby><ruby>深<rt>shēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>互<rt>hù</rt></ruby><ruby>相<rt>xiāng</rt></ruby><ruby>颂<rt>sòng</rt></ruby><ruby>赞<rt>zàn</rt></ruby><ruby>了<rt>le</rt></ruby>。
-:::
-
 :::{#cr-poem-gloss .gloss lang="zh-CN"}
+<!-- Words are named spans (g-fan, g-zhe ...) so a step can highlight
+     exactly the characters it discusses. -->
 <!-- Word-for-word glosses: type the English between <rt> and </rt>.
      Ruby sits under the text here (.gloss in theme/site-theme.css). -->
 <ruby>冰心<rt>Ice heart</rt></ruby>《<ruby>繁星<rt>Many stars</rt></ruby>[·]{.interpunct}<ruby>一<rt>one</rt></ruby>》
 
-| <ruby>繁星<rt>Many stars</rt></ruby><ruby>闪烁<rt>glitter</rt></ruby><ruby>着<rt>[ongoing]</rt></ruby>——
-| 　<ruby>深蓝<rt>deep blue</rt></ruby><ruby>的<rt>[ ]</rt></ruby><ruby>太空<rt>expanse(s)</rt></ruby>，
-| 　<ruby>何曾<rt>did ever</rt></ruby><ruby>听得见<rt>to be able to hear</rt></ruby><ruby>它们<rt>their</rt></ruby><ruby>对语<rt>dialogue(s)</rt></ruby>？
-| <ruby>沉默<rt>to be silent</rt></ruby><ruby>中<rt>in</rt></ruby>，
-| 　<ruby>微光<rt>faint light</rt></ruby><ruby>里<rt>inside</rt></ruby>，
-| 　　<ruby>它们<rt>they</rt></ruby><ruby>深深<rt>deep</rt></ruby><ruby>的<rt>[ ]</rt></ruby><ruby>互相<rt>mutually</rt></ruby><ruby>颂赞<rt>to praise</rt></ruby><ruby>了<rt>[complete]</rt></ruby>。
+| <ruby>[繁]{#g-fan}星<rt>Many stars</rt></ruby><ruby>闪烁<rt>glitter</rt></ruby><ruby>[着]{#g-zhe}<rt>[ongoing]</rt></ruby>——
+| 　<ruby>[深]{#g-shen-a}蓝<rt>deep blue</rt></ruby><ruby>的<rt>[ ]</rt></ruby><ruby>[太空]{#g-taikong}<rt>expanse(s)</rt></ruby>，
+| 　<ruby>[何曾]{#g-heceng}<rt>did ever</rt></ruby><ruby>[听得见]{#g-tingdejian}<rt>to be audible</rt></ruby><ruby>[它们]{#g-tamen-a}<rt>their</rt></ruby><ruby>[对语]{#g-duiyu}<rt>dialogue(s)</rt></ruby>？
+| <ruby>[沉默]{#g-chenmo}<rt>to be silent</rt></ruby><ruby>[中]{#g-zhong}<rt>in</rt></ruby>，
+| 　<ruby>[微光]{#g-weiguang}<rt>faint light</rt></ruby><ruby>[里]{#g-li}<rt>inside</rt></ruby>，
+| 　　<ruby>[它们]{#g-tamen-b}<rt>they</rt></ruby><ruby>[深深]{#g-shenshen}<rt>deep</rt></ruby><ruby>的<rt>[ ]</rt></ruby><ruby>[互相]{#g-huxiang}<rt>mutually</rt></ruby><ruby>[颂赞]{#g-songzan}<rt>to praise</rt></ruby><ruby>[了]{#g-le}<rt>[complete]</rt></ruby>。
 :::
 
-:::{#cr-poem-dav  lang="en"}
-<!-- Outside the line block, so highlight line numbers still count from the poem -->
-Vast Stars (1) by Bingxin
+::::{#cr-poem-grid-en .poem-grid .poem-stack}
+<!-- The three translations. Lines are named spans (dav-1, cb-1, lin-1 ...)
+     so one trigger can highlight a line in all three; words the commentary
+     compares are named too (dav-fan, cb-zhe, lin-li ...). -->
+:::{lang="en"}
+Vast Stars (1) by Bing Xin
 
-| Vast stars twinkle continuously—
-| 　Deep blue space,
-| 　Were their words ever heard?
-| Within silence,
-| 　In the glimmer,
-| 　　They have deeply, mutually chanted praises.
+| [[Vast]{#dav-fan} stars [twinkle continuously]{#dav-zhe}[—]{#dav-dash .dash}]{#dav-1}
+| 　[Deep blue space,]{#dav-2}
+| 　[Could their words ever be heard?]{#dav-3}
+| [[Within]{#dav-zhong} silence,]{#dav-4}
+| 　[[In]{#dav-li} the glimmer,]{#dav-5}
+| 　　[They have deeply, mutually chanted praises.]{#dav-6}
 :::
 
-:::{#cr-poem-cay-boy  lang="en"}
-<!-- Outside the line block, so highlight line numbers still count from the poem -->
-A Maze of Stars (1) by Bingxin
+:::{lang="en"}
+A Maze of Stars (1) by Bing Xin
 
-| A maze of stars glistens
-| in the deep azure vault of sky.
-| When before have I overheard their whispers?
-| In the profound silence,
-| in their own faint light,
-| this deep acknowledgment of one another.
+| [[A maze of]{#cb-fan} stars [glistens]{#cb-zhe}]{#cb-1}
+| [in the deep azure vault of sky.]{#cb-2}
+| [When before have I overheard their whispers?]{#cb-3}
+| [[In]{#cb-zhong} the profound silence,]{#cb-4}
+| [[in]{#cb-li} their own faint light,]{#cb-5}
+| [this deep acknowledgment of one another.]{#cb-6}
 :::
 
-:::{#cr-poem-lin  lang="en"}
-<!-- Outside the line block, so highlight line numbers still count from the poem -->
-Infinite Stars (1) by Bingxin
+:::{lang="en"}
+Infinite Stars (1) by Bing Xin
 
-| Infinite stars sparkle
-| 　In the deep blues of sky
-| 　Does anyone ever hear them talk?
-| In the depths of silence
-| 　Within this faint light
-| 　　They brightly sing one another's praise.
+| [[Infinite]{#lin-fan} stars [sparkle]{#lin-zhe}]{#lin-1}
+| 　[In the deep blues of sky]{#lin-2}
+| 　[Does anyone ever hear them talk?]{#lin-3}
+| [[In]{#lin-zhong} the depths of silence]{#lin-4}
+| 　[[Within]{#lin-li} this faint light]{#lin-5}
+| 　　[They brightly sing one another's praise.]{#lin-6}
 :::
+::::
 
-::::{#cr-poem-grid .poem-grid}
-<!-- Copies of the four poems above, laid out as a grid (.poem-grid in
-     theme/site-theme.css). Edit the originals and these together. Comments
-     go inside a sticky: anywhere else in a cr-section they become a blank
-     narrative step. -->
-:::{lang="zh-CN"}
+:::::{#cr-poem-side .poem-side}
+<!-- The original beside the three translations, for comparing one feature
+     across all four (.poem-side in theme/site-theme.css). Copies again. -->
+::::{lang="zh-CN"}
 冰心《繁星[·]{.interpunct}一》
 
-| 繁星闪烁着——
+| 繁星闪烁着[——]{#s-zh-dash .dash .cjk-dash}
 | 　深蓝的太空，
 | 　何曾听得见它们对语？
 | 沉默中，
 | 　微光里，
 | 　　它们深深的互相颂赞了。
-:::
+::::
 
+::::{.poem-side-translations}
 :::{lang="en"}
-Vast Stars (1) by Bingxin
+Vast Stars (1) by Bing Xin
 
-| Vast stars twinkle continuously—
+| Vast stars twinkle continuously[—]{#s-dav-dash .dash}
 | 　Deep blue space,
-| 　Were their words ever heard?
+| 　Could their words ever be heard?
 | Within silence,
 | 　In the glimmer,
 | 　　They have deeply, mutually chanted praises.
 :::
 
 :::{lang="en"}
-A Maze of Stars (1) by Bingxin
+A Maze of Stars (1) by Bing Xin
 
 | A maze of stars glistens
 | in the deep azure vault of sky.
@@ -215,7 +190,7 @@ A Maze of Stars (1) by Bingxin
 :::
 
 :::{lang="en"}
-Infinite Stars (1) by Bingxin
+Infinite Stars (1) by Bing Xin
 
 | Infinite stars sparkle
 | 　In the deep blues of sky
@@ -225,43 +200,6 @@ Infinite Stars (1) by Bingxin
 | 　　They brightly sing one another's praise.
 :::
 ::::
-
-::::{#cr-poem-grid-en .poem-grid .poem-stack}
-<!-- The three translations only, copies again: edit with the originals. -->
-:::{lang="en"}
-Vast Stars (1) by Bingxin
-
-| Vast stars twinkle continuously—
-| 　Deep blue space,
-| 　Were their words ever heard?
-| Within silence,
-| 　In the glimmer,
-| 　　They have deeply, mutually chanted praises.
-:::
-
-:::{lang="en"}
-A Maze of Stars (1) by Bingxin
-
-| A maze of stars glistens
-| in the deep azure vault of sky.
-| When before have I overheard their whispers?
-| In the profound silence,
-| in their own faint light,
-| this deep acknowledgment of one another.
-:::
-
-:::{lang="en"}
-Infinite Stars (1) by Bingxin
-
-| Infinite stars sparkle
-| 　In the deep blues of sky
-| 　Does anyone ever hear them talk?
-| In the depths of silence
-| 　Within this faint light
-| 　　They brightly sing one another's praise.
-:::
-::::
+:::::
 
 :::
-
-Closing text goes here.
