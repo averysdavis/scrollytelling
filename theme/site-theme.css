@@ -246,6 +246,12 @@ h6,
   --cr-poem-font-family: var(--font-zh), serif;
 }
 
+/* Pinyin tagged on its own (lang="zh-Latn-pinyin") is Latin script, so
+   it takes the Latin face despite matching :lang(zh) */
+:lang(zh-Latn) {
+  font-family: var(--font-latin), serif;
+}
+
 /* Pinyin is Latin, so ruby text over Chinese takes the Latin face */
 :lang(zh) rt {
   font-family: var(--font-latin), serif;
