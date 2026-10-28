@@ -244,6 +244,19 @@ h6,
   line-height: 2.4;
 }
 
+/* Word-for-word glosses go under the Chinese, a little larger than pinyin
+   so the English stays readable */
+.gloss ruby {
+  -webkit-ruby-position: after;
+  ruby-position: under;
+}
+
+.gloss rt {
+  font-size: 0.55em;
+  /* Gap between the characters and the gloss beneath them */
+  padding-top: 0.6em;
+}
+
 /* The interpunct in titles like 《繁星·一》 is set narrow by the font;
    wrap it as [·]{.interpunct} to give it room */
 .interpunct {
@@ -401,6 +414,100 @@ code span.er {
 
 .cr-section .sticky-col .sticky-col-stack .sticky:has(.line-block)[style*='matrix'] {
   scale: 0.6;
+}
+
+/* Several poems in one sticky, two by two so all four fit on screen;
+   smaller type as the column narrows, stacked only on phones. Pink hairlines
+   divide the versions. The stack clips anything past its edges, so the
+   grid keeps clear of them. */
+.cr-section .sticky-col .sticky-col-stack .sticky.poem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  box-sizing: border-box;
+  width: 100%;
+  padding-inline: 1.5rem;
+  font-size: 1rem;
+}
+
+.poem-grid > * {
+  padding: 1.5rem 2rem;
+}
+
+/* Rule down the middle and across between the rows */
+.poem-grid > :nth-child(even) {
+  border-left: 1px solid var(--color-accent);
+}
+
+.poem-grid > :nth-child(n + 3) {
+  border-top: 1px solid var(--color-accent);
+}
+
+.poem-grid .line-block {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1100px) {
+  .cr-section .sticky-col .sticky-col-stack .sticky.poem-grid {
+    padding-inline: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .poem-grid > * {
+    padding: 1.25rem 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .cr-section .sticky-col .sticky-col-stack .sticky.poem-grid {
+    grid-template-columns: minmax(0, 1fr);
+    font-size: 0.75rem;
+  }
+
+  .poem-grid > * {
+    padding: 0.75rem 0;
+  }
+
+  .poem-grid > :nth-child(even) {
+    border-left: none;
+  }
+
+  .poem-grid > :nth-child(n + 2) {
+    border-top: 1px solid var(--color-accent);
+  }
+}
+
+/* The translations alone, stacked one above another so their lines can
+   be read across, with a rule between each. The column is as wide as the
+   longest line and centred, so the poems sit mid-column with their lines
+   still flush left. */
+.cr-section .sticky-col .sticky-col-stack .sticky.poem-stack {
+  grid-template-columns: minmax(0, max-content);
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.poem-stack > * {
+  padding: 0.75rem 0;
+}
+
+.poem-stack > :nth-child(n) {
+  border-left: none;
+  border-top: none;
+}
+
+/* A short centred rule rather than one the full width of the column */
+.poem-stack > :nth-child(n + 2)::before {
+  content: '';
+  display: block;
+  width: 60%;
+  margin: 0 auto 0.75rem;
+  border-top: 1px solid var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .cr-section .sticky-col .sticky-col-stack .sticky.poem-stack {
+    font-size: 0.75rem;
+  }
 }
 
 /* ===================

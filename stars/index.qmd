@@ -87,13 +87,21 @@ First narrative paragraph. Ending it with a trigger brings the poem into view. @
 
 Highlight a line by its number. [@cr-poem-og]{highlight="2"}
 
-Highlight and zoom to a line in one step. This trigger swaps in the second poem. [@cr-poem-py]{hlz="3"}
+Highlight and zoom to a line in one step. This trigger swaps in the second poem. [@cr-poem-py]{hlz="4"}
 
 My English translation. @cr-poem-dav
 
 Cayley and Boynton translation. @cr-poem-cay-boy
 
 Lin translation. @cr-poem-lin
+
+Test. [@cr-poem-lin]{highlight="3"}
+
+All three translations do not recreate the spacing of the original. @cr-poem-grid
+
+The three translations together. @cr-poem-grid-en
+
+Word for word. @cr-poem-gloss
 
 :::{#cr-poem-og lang="zh-CN"}
 <!-- Outside the line block, so highlight line numbers still count from the poem -->
@@ -117,6 +125,19 @@ Lin translation. @cr-poem-lin
 | <ruby>沉<rt>chén</rt></ruby><ruby>默<rt>mò</rt></ruby><ruby>中<rt>zhōng</rt></ruby>，
 | 　<ruby>微<rt>wēi</rt></ruby><ruby>光<rt>guāng</rt></ruby><ruby>里<rt>lǐ</rt></ruby>，
 | 　　<ruby>它<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>深<rt>shēn</rt></ruby><ruby>深<rt>shēn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>互<rt>hù</rt></ruby><ruby>相<rt>xiāng</rt></ruby><ruby>颂<rt>sòng</rt></ruby><ruby>赞<rt>zàn</rt></ruby><ruby>了<rt>le</rt></ruby>。
+:::
+
+:::{#cr-poem-gloss .gloss lang="zh-CN"}
+<!-- Word-for-word glosses: type the English between <rt> and </rt>.
+     Ruby sits under the text here (.gloss in theme/site-theme.css). -->
+<ruby>冰心<rt>Ice heart</rt></ruby>《<ruby>繁星<rt>Many stars</rt></ruby>[·]{.interpunct}<ruby>一<rt>one</rt></ruby>》
+
+| <ruby>繁星<rt>Many stars</rt></ruby><ruby>闪烁<rt>glitter</rt></ruby><ruby>着<rt>[ongoing]</rt></ruby>——
+| 　<ruby>深蓝<rt>deep blue</rt></ruby><ruby>的<rt>[ ]</rt></ruby><ruby>太空<rt>expanse(s)</rt></ruby>，
+| 　<ruby>何曾<rt>did ever</rt></ruby><ruby>听得见<rt>to be able to hear</rt></ruby><ruby>它们<rt>their</rt></ruby><ruby>对语<rt>dialogue(s)</rt></ruby>？
+| <ruby>沉默<rt>to be silent</rt></ruby><ruby>中<rt>in</rt></ruby>，
+| 　<ruby>微光<rt>faint light</rt></ruby><ruby>里<rt>inside</rt></ruby>，
+| 　　<ruby>它们<rt>they</rt></ruby><ruby>深深<rt>deep</rt></ruby><ruby>的<rt>[ ]</rt></ruby><ruby>互相<rt>mutually</rt></ruby><ruby>颂赞<rt>to praise</rt></ruby><ruby>了<rt>[complete]</rt></ruby>。
 :::
 
 :::{#cr-poem-dav  lang="en"}
@@ -154,6 +175,92 @@ Infinite Stars (1) by Bingxin
 | 　Within this faint light
 | 　　They brightly sing one another's praise.
 :::
+
+::::{#cr-poem-grid .poem-grid}
+<!-- Copies of the four poems above, laid out as a grid (.poem-grid in
+     theme/site-theme.css). Edit the originals and these together. Comments
+     go inside a sticky: anywhere else in a cr-section they become a blank
+     narrative step. -->
+:::{lang="zh-CN"}
+冰心《繁星[·]{.interpunct}一》
+
+| 繁星闪烁着——
+| 　深蓝的太空，
+| 　何曾听得见它们对语？
+| 沉默中，
+| 　微光里，
+| 　　它们深深的互相颂赞了。
+:::
+
+:::{lang="en"}
+Vast Stars (1) by Bingxin
+
+| Vast stars twinkle continuously—
+| 　Deep blue space,
+| 　Were their words ever heard?
+| Within silence,
+| 　In the glimmer,
+| 　　They have deeply, mutually chanted praises.
+:::
+
+:::{lang="en"}
+A Maze of Stars (1) by Bingxin
+
+| A maze of stars glistens
+| in the deep azure vault of sky.
+| When before have I overheard their whispers?
+| In the profound silence,
+| in their own faint light,
+| this deep acknowledgment of one another.
+:::
+
+:::{lang="en"}
+Infinite Stars (1) by Bingxin
+
+| Infinite stars sparkle
+| 　In the deep blues of sky
+| 　Does anyone ever hear them talk?
+| In the depths of silence
+| 　Within this faint light
+| 　　They brightly sing one another's praise.
+:::
+::::
+
+::::{#cr-poem-grid-en .poem-grid .poem-stack}
+<!-- The three translations only, copies again: edit with the originals. -->
+:::{lang="en"}
+Vast Stars (1) by Bingxin
+
+| Vast stars twinkle continuously—
+| 　Deep blue space,
+| 　Were their words ever heard?
+| Within silence,
+| 　In the glimmer,
+| 　　They have deeply, mutually chanted praises.
+:::
+
+:::{lang="en"}
+A Maze of Stars (1) by Bingxin
+
+| A maze of stars glistens
+| in the deep azure vault of sky.
+| When before have I overheard their whispers?
+| In the profound silence,
+| in their own faint light,
+| this deep acknowledgment of one another.
+:::
+
+:::{lang="en"}
+Infinite Stars (1) by Bingxin
+
+| Infinite stars sparkle
+| 　In the deep blues of sky
+| 　Does anyone ever hear them talk?
+| In the depths of silence
+| 　Within this faint light
+| 　　They brightly sing one another's praise.
+:::
+::::
 
 :::
 
