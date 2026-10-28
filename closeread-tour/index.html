@@ -157,12 +157,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-narrative-sidebar-width: 1fr;
---cr-narrative-font-size: 1.15rem;
---cr-narrative-font-family: Georgia, serif;
---cr-narrative-border-radius: 2px;
---cr-poem-font-family: Georgia, serif;
+          --cr-narrative-font-size: 1.15rem;
 --cr-narrative-overlay-max-width: 40ch;
+--cr-narrative-border-radius: 2px;
+--cr-narrative-sidebar-width: 1fr;
+--cr-poem-font-family: Georgia, serif;
+--cr-narrative-font-family: Georgia, serif;
         }
       </style>
     
@@ -201,27 +201,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A <strong>trigger</strong> is any paragraph that contains <code>@cr-&lt;id&gt;</code>. When it scrolls into view, the sticky with that id appears.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="1" data-focus-on="cr-poem">
+<div class="trigger new-trigger" data-focus-on="cr-poem" data-highlight="1">
 <div class="narrative">
 <p><code>highlight="1"</code> highlights a line by its number.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="2-3" data-focus-on="cr-poem">
+<div class="trigger new-trigger" data-focus-on="cr-poem" data-highlight="2-3">
 <div class="narrative">
 <p>A range works too: <code>highlight="2-3"</code>.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="cr-wood" data-focus-on="cr-poem">
+<div class="trigger new-trigger" data-focus-on="cr-poem" data-highlight="cr-wood">
 <div class="narrative">
 <p>You can also highlight a span you’ve tagged with an id, like <code>[yellow wood]{#cr-wood}</code>.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-zoom-to="4" data-focus-on="cr-poem">
+<div class="trigger new-trigger" data-focus-on="cr-poem" data-zoom-to="4">
 <div class="narrative">
 <p><code>zoom-to="4"</code> zooms in on line 4 and centers it.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-hlz="5" data-focus-on="cr-poem">
+<div class="trigger new-trigger" data-focus-on="cr-poem" data-hlz="5">
 <div class="narrative">
 <p><code>hlz="5"</code> highlights and zooms in one step.</p>
 </div>
@@ -249,12 +249,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Code blocks can be stickies too. This section uses <code>layout="sidebar-right"</code>.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="1-2" data-focus-on="cr-code">
+<div class="trigger new-trigger" data-focus-on="cr-code" data-highlight="1-2">
 <div class="narrative">
 <p>Code lines can be highlighted by number, just like poem lines.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="5-6" data-focus-on="cr-code">
+<div class="trigger new-trigger" data-focus-on="cr-code" data-highlight="5-6">
 <div class="narrative">
 <p>Here we highlight the loop body.</p>
 </div>
@@ -264,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A trigger can also be a whole div with <code>focus-on="cr-code"</code> instead of an inline <code>@cr-code</code>. This is useful for longer passages with several paragraphs.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-highlight="8" data-focus-on="cr-code">
+<div class="trigger new-trigger" data-focus-on="cr-code" data-highlight="8">
 <div class="narrative">
 <p>This entire div is one trigger.</p>
 <p>It highlights the <code>return</code> line.</p>
@@ -296,17 +296,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In overlay layouts, the text floats over a full-width sticky.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2" data-focus-on="cr-map">
+<div class="trigger new-trigger" data-focus-on="cr-map" data-scale-by="2">
 <div class="narrative">
 <p><code>scale-by="2"</code> scales the sticky by a factor.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2" data-pan-to="25%,25%" data-focus-on="cr-map">
+<div class="trigger new-trigger" data-focus-on="cr-map" data-pan-to="25%,25%" data-scale-by="2">
 <div class="narrative">
 <p><code>pan-to</code> moves it with a CSS translate. Here it moves to the top-left corner. </p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2" data-pan-to="-25%,-25%" data-focus-on="cr-map">
+<div class="trigger new-trigger" data-focus-on="cr-map" data-pan-to="-25%,-25%" data-scale-by="2">
 <div class="narrative">
 <p>And now to the bottom-right.</p>
 </div>
