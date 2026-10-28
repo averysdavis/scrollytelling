@@ -8,6 +8,8 @@ project:
     - theme/fonts/LibreBaskerville-VF.ttf
     - theme/fonts/LibreBaskerville-Italic-VF.ttf
     - theme/fonts/LibreBaskerville-OFL.txt
+    - theme/fonts/JetBrainsMono-latin-wght.woff2
+    - theme/fonts/JetBrainsMono-OFL.txt
 
 website:
   title: "Avery Davis"

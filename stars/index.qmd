@@ -1,6 +1,6 @@
 ---
-title: Fanxing
-description: "Bing Xin's [繁星]{lang=\"zh-CN\"} (Vast Stars)."
+title: Fánxīng
+description: "Understanding Bing Xin's poem"
 format:
   closeread-html:
     # Set to true to show trigger/sticky outlines while you build the story
@@ -23,9 +23,39 @@ format:
       poem-font-family: "`var(--font-latin), var(--font-zh), serif`"
 ---
 
+```{=html}
+<nav class="story-toc" aria-label="Sections">
+  <a href="#historical-context">Historical Context</a>
+  <span class="story-toc-sep" aria-hidden="true">/</span>
+  <a href="#understanding-the-poem">Understanding the poem</a>
+  <span class="story-toc-sep" aria-hidden="true">/</span>
+  <a href="#analysis">Analysis</a>
+</nav>
+```
+
+# Historical Context
+
 :::{.cr-section}
 
-Context @cr-poem-og
+Coming soon... @cr-ctx-poem
+
+:::{#cr-ctx-poem lang="zh-CN"}
+<!-- Copy of cr-poem-og for this section; edit both. -->
+冰心《繁星[·]{.interpunct}一》
+
+| 繁星闪烁着——
+| 　深蓝的太空，
+| 　何曾听得见它们对语？
+| 沉默中，
+| 　微光里，
+| 　　它们深深的互相颂赞了。
+:::
+
+:::
+
+# Understanding the poem
+
+:::{.cr-section}
 
 Here are three different translations to try to get at the meaning. The first translation is my own and prioritizes the meaning a Chinese reader would get while sacrificing the experience of an English reader. The second is by John Cayley and Grace Boynton and is quite an experience for the English reader but adds meaning not in the original Chinese. The third, by Julia C. Lin, retains the simple conciseness of the original but again adds its own meaning. @cr-poem-grid-en
 
@@ -83,9 +113,7 @@ All the English translations have a lot of active language. @cr-poem-grid-en
 
 The original Chinese, however, has a much more passive feel. Chinese has a tendency to drop the subjects of sentences, meaning that what happens isn’t caused by anything or anyone in particular. @cr-poem-og
 
-Summary of poem
-
-Thesis
+Spacing [@cr-poem-grid]{highlight="ind-zh-2,ind-zh-3,ind-zh-5,ind-zh-6,ind-dav-2,ind-dav-3,ind-dav-5,ind-dav-6,ind-lin-2,ind-lin-3,ind-lin-5,ind-lin-6"}
 
 :::{#cr-poem-og lang="zh-CN"}
 <!-- Outside the line block, so highlight line numbers still count from the poem -->
@@ -201,5 +229,77 @@ Infinite Stars (1) by Bing Xin
 :::
 ::::
 :::::
+
+
+::::{#cr-poem-grid .poem-grid .no-dim}
+<!-- All four versions, two by two (.poem-grid in theme/site-theme.css).
+     Copies of the poems above; edit with them. Indents are named spans
+     (ind-zh-2, ind-dav-6 ...) so the Spacing step can highlight them. -->
+:::{lang="zh-CN"}
+冰心《繁星[·]{.interpunct}一》
+
+| 繁星闪烁着——
+| [　]{#ind-zh-2 .indent}深蓝的太空，
+| [　]{#ind-zh-3 .indent}何曾听得见它们对语？
+| 沉默中，
+| [　]{#ind-zh-5 .indent}微光里，
+| [　　]{#ind-zh-6 .indent}它们深深的互相颂赞了。
+:::
+
+:::{lang="en"}
+Vast Stars (1) by Bing Xin
+
+| Vast stars twinkle continuously—
+| [　]{#ind-dav-2 .indent}Deep blue space,
+| [　]{#ind-dav-3 .indent}Could their words ever be heard?
+| Within silence,
+| [　]{#ind-dav-5 .indent}In the glimmer,
+| [　　]{#ind-dav-6 .indent}They have deeply, mutually chanted praises.
+:::
+
+:::{lang="en"}
+A Maze of Stars (1) by Bing Xin
+
+| A maze of stars glistens
+| in the deep azure vault of sky.
+| When before have I overheard their whispers?
+| In the profound silence,
+| in their own faint light,
+| this deep acknowledgment of one another.
+:::
+
+:::{lang="en"}
+Infinite Stars (1) by Bing Xin
+
+| Infinite stars sparkle
+| [　]{#ind-lin-2 .indent}In the deep blues of sky
+| [　]{#ind-lin-3 .indent}Does anyone ever hear them talk?
+| In the depths of silence
+| [　]{#ind-lin-5 .indent}Within this faint light
+| [　　]{#ind-lin-6 .indent}They brightly sing one another's praise.
+:::
+::::
+
+:::
+
+# Analysis
+
+:::{.cr-section}
+
+Summary of poem @cr-ana-poem
+
+Thesis @cr-ana-poem
+
+:::{#cr-ana-poem lang="zh-CN"}
+<!-- Copy of cr-poem-og for this section; edit both. -->
+冰心《繁星[·]{.interpunct}一》
+
+| 繁星闪烁着——
+| 　深蓝的太空，
+| 　何曾听得见它们对语？
+| 沉默中，
+| 　微光里，
+| 　　它们深深的互相颂赞了。
+:::
 
 :::

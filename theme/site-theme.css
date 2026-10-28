@@ -183,6 +183,17 @@ h6,
   font-display: swap;
 }
 
+/* JetBrains Mono (SIL OFL; licence in fonts/JetBrainsMono-OFL.txt) for
+   labels, as on averysdavis.com. Latin subset, variable weight, copied
+   unmodified from the site's @fontsource-variable/jetbrains-mono 5.3.0. */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrainsMono-latin-wght.woff2') format('woff2');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ===================
    CHINESE TYPE
    Chinese is set in Source Han Serif, served from the site so it holds
@@ -288,6 +299,54 @@ h6,
 #title-block-header {
   border-bottom: 2px solid var(--color-accent);
   padding-bottom: 1rem;
+}
+
+/* Contents: the section index from the site's About page
+   (.about-section-nav in app/styles/pages/content.css), mono labels
+   between hairlines, without the sticky positioning */
+.story-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 2.5rem 0 1.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.story-toc a,
+.story-toc-sep {
+  font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+  font-size: 0.8125rem;
+  color: var(--color-fg-light);
+}
+
+.story-toc a {
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s ease-out;
+}
+
+.story-toc a:hover {
+  color: var(--color-fg-bold);
+  text-decoration: none;
+}
+
+.story-toc a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Section headings carry the same pink rule as the title block, with
+   room above to separate the sections and below before the story */
+section.level1 > h1 {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-accent);
 }
 
 strong {
@@ -673,6 +732,21 @@ code span.er {
   span[id^='lb']
   span.cr-hl {
   color: var(--color-accent);
+}
+
+/* Stickies marked .no-dim keep their text at full ink while something in
+   them is highlighted, for highlights that are marks rather than text,
+   like the indent blocks below */
+.cr-section .sticky-col .sticky-col-stack .cr-active.cr-hl-within.no-dim div.line-block span[id^='lb'],
+.cr-section .sticky-col .sticky-col-stack .cr-active.cr-hl-within.no-dim p {
+  color: var(--color-fg);
+}
+
+/* Indents ([　]{.indent}) are blank, so a highlight shows as a pink block
+   where the space is rather than as coloured text */
+.cr-section .sticky-col .sticky-col-stack .cr-hl-within .indent.cr-hl {
+  background-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+  transition: background-color linear 0.3s;
 }
 
 /* ===================
