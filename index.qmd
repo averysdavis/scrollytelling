@@ -1,0 +1,13 @@
+---
+title: Scrollytelling
+description: "Scroll-driven stories."
+listing:
+  # Each story is a folder with an index.qmd; list new ones here to add them
+  contents:
+    - stars/index.qmd
+    - closeread-tour/index.qmd
+  type: default
+  sort: false
+  fields: [title, description]
+  image-placeholder: ""
+---

@@ -750,6 +750,42 @@ code span.er {
 }
 
 /* ===================
+   STORY LIST
+   The index page lists stories without thumbnails, so Quarto's listing
+   grid would leave an empty image column; lay items out as plain blocks.
+   =================== */
+.quarto-listing-default .quarto-post {
+  display: block;
+  padding-block: 1rem;
+}
+
+/* Quarto writes listing links and dividers as literal light-theme
+   colours (near-black, pale grey) and its stylesheet loads after this
+   one, so these selectors are one step more specific */
+/* Titles are underlined in the accent so they read as links */
+div.quarto-post .listing-title a {
+  color: var(--color-fg-bold);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+div.quarto-post .listing-title a:hover {
+  color: var(--color-accent);
+}
+
+/* Descriptions, and any other field Quarto adds, are links too */
+div.quarto-post .listing-description a,
+div.quarto-post .metadata a {
+  color: var(--color-fg);
+}
+
+.quarto-listing-default div.quarto-post {
+  border-bottom-color: var(--color-border);
+}
+
+/* ===================
    THEME TOGGLE
    Same control as the site header (layout/navigation.css), floated
    because stories have no header to hold it.
