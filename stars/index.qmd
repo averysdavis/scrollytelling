@@ -29,7 +29,7 @@ format:
   <span class="story-toc-sep" aria-hidden="true">/</span>
   <a href="#understanding-the-poem">Understanding the poem</a>
   <span class="story-toc-sep" aria-hidden="true">/</span>
-  <a href="#analysis">Analysis</a>
+  <a href="#meaning">Meaning</a>
 </nav>
 ```
 
@@ -57,31 +57,53 @@ Coming soon... @cr-ctx-poem
 
 :::{.cr-section}
 
-Here are three different translations to try to get at the meaning. The first translation is my own and prioritizes the meaning a Chinese reader would get while sacrificing the experience of an English reader. The second is by John Cayley and Grace Boynton and is quite an experience for the English reader but adds meaning not in the original Chinese. The third, by Julia C. Lin, retains the simple conciseness of the original but again adds its own meaning. @cr-poem-grid-en
+Here are three different translations to try to get at the meaning. @cr-poem-grid-en
+
+The first translation is my own and prioritizes the meaning a Chinese reader would get while sacrificing the experience of an English reader. [@cr-poem-grid-en]{highlight="dav-1,dav-2,dav-3,dav-4,dav-5,dav-6"}
+
+The second is by John Cayley and Grace Boynton and is quite an experience for the English reader but adds meaning not in the original Chinese. [@cr-poem-grid-en]{highlight="cb-1,cb-2,cb-3,cb-4,cb-5,cb-6"}
+
+The third, by Julia C. Lin, retains the simple conciseness of the original but again adds its own meaning. [@cr-poem-grid-en]{highlight="lin-1,lin-2,lin-3,lin-4,lin-5,lin-6"}
 
 And here is a word-by-word translation, to see the meaning as a Chinese reader would. The square brackets \[\] indicate a grammatical term. @cr-poem-gloss
 
 The three translations translate <ruby lang="zh-CN">繁<rt>fán</rt></ruby> three ways: “vast,” “a maze of,” and “infinite.” <ruby lang="zh-CN">繁<rt>fán</rt></ruby> means many, dense, and intricate, and no English word contains all of these meanings. [@cr-poem-grid-en]{highlight="dav-fan,cb-fan,lin-fan"}
 
-Chinese verbs don’t conjugate to carry tense, so tenses, unlike in English, are optional. Tenses are often indicated with additional, optional grammatical markers. <ruby lang="zh-CN">着<rt>zhe</rt></ruby> is one of them and marks an ongoing action. What is a one-syllable marker in Chinese is either dropped in translation or translated as “continuously,” adding length the original did not have. [@cr-poem-grid-en]{highlight="dav-zhe,cb-zhe,lin-zhe"}
+Chinese verbs don’t conjugate to carry tense, so tenses, unlike in English, are optional. Tenses are often indicated with additional, optional grammatical markers. <ruby lang="zh-CN">着<rt>zhe</rt></ruby> is one of them and marks an ongoing action. [@cr-poem-gloss]{highlight="g-zhe"}
+
+What is a one-syllable marker in Chinese is either dropped in translation or translated as “continuously,” adding length the original did not have. [@cr-poem-grid-en]{highlight="dav-zhe,cb-zhe,lin-zhe"}
 
 The dash leaves the line open, but only one translation includes it. [@cr-poem-side]{highlight="s-zh-dash,s-dav-dash"}
 
-The entire line is a noun phrase. The <ruby lang="zh-CN">的<rt>de</rt></ruby> is merely a grammatical character indicating that deep blue (深蓝) is an adjective modifying the noun expanse (太空). [@cr-poem-gloss]{highlight="2"}
+The entire second line is a noun phrase. [@cr-poem-gloss]{highlight="2"}
+
+The <ruby lang="zh-CN">的<rt>de</rt></ruby> is merely a grammatical character indicating that deep blue (深蓝) is an adjective modifying the noun expanse (太空). [@cr-poem-gloss]{highlight="g-de-2"}
 
 The term <ruby lang="zh-CN">太<rt>tài</rt>空<rt>kōng</rt></ruby> would be understood by a modern Chinese reader as “outer space,” but an early 20th-century reader would have understood it as “expanse,” with a plainer connotation than the English word has. [@cr-poem-gloss]{highlight="g-taikong"}
 
 Chinese does not differentiate between singular and plural nouns, so the line could be translated as “deep blue expanse” or “deep blue expanse**s**.” [@cr-poem-gloss]{highlight="2"}
 
-The parataxis in Chinese is very concise and plain while leaving the relation unstated. The first translation recreates the simplicity but loses some of the connection to the rest of the poem. The second and third translations set out to capture the feeling of the original by spelling the relation out, but in turn they lose the simplicity of an isolated phrase. [@cr-poem-grid-en]{highlight="dav-2,cb-2,lin-2"}
+The parataxis in Chinese is very concise and plain while leaving the relation unstated. [@cr-poem-gloss]{highlight="2"}
 
-Chinese grammar creates an ambiguity that English cannot. The original Chinese line has no subject. This shifts focus from whoever could or could not hear the dialogues to the creators of the dialogues themselves. The closest English can get to this is using the passive voice, as in the first translation, to shift the focus. [@cr-poem-gloss]{highlight="3"}
+The first translation recreates the simplicity but loses some of the connection to the rest of the poem. [@cr-poem-grid-en]{highlight="dav-2"}
 
-The term <ruby lang="zh-CN">何<rt>hé</rt>曾<rt>céng</rt></ruby> is a classical rhetorical marker. It contrasts with the modern vernacular of the previous lines. [@cr-poem-gloss]{highlight="g-heceng"}
+The second and third translations set out to capture the feeling of the original by spelling the relation out, but in turn they lose the simplicity of an isolated phrase. [@cr-poem-grid-en]{highlight="cb-2,lin-2"}
+
+Chinese grammar creates an ambiguity that English cannot. The original Chinese line has no subject. [@cr-poem-gloss]{highlight="3"}
+
+This shifts focus from whoever could or could not hear the dialogues to the creators of the dialogues themselves. [@cr-poem-gloss]{highlight="3"}
+
+The closest English can get to this is using the passive voice, as in the first translation, to shift the focus. [@cr-poem-grid-en]{highlight="dav-3"}
+
+In the third line, the term <ruby lang="zh-CN">何<rt>hé</rt>曾<rt>céng</rt></ruby> is a classical rhetorical marker. It contrasts with the modern vernacular of the previous lines. [@cr-poem-gloss]{highlight="g-heceng"}
 
 <ruby lang="zh-CN">听<rt>tīng</rt>得<rt>de</rt>见<rt>jiàn</rt></ruby> doesn’t ask if the dialogues were heard but whether hearing them is possible. [@cr-poem-gloss]{highlight="g-tingdejian"}
 
-<ruby lang="zh-CN">对<rt>duì</rt>语<rt>yǔ</rt></ruby> is an unusual word choice. The more common, conversational term for dialogue or conversation would be <ruby lang="zh-CN">对<rt>duì</rt>话<rt>huà</rt></ruby>. <ruby lang="zh-CN">对<rt>duì</rt>语<rt>yǔ</rt></ruby> gives a more literary feel, again making this line feel more formal and older than the rest of the poem. Additionally, <ruby lang="zh-CN">对<rt>duì</rt></ruby> means face-to-face or reciprocal, suggesting the dialogues are mutual. [@cr-poem-gloss]{highlight="g-duiyu"}
+<ruby lang="zh-CN">对<rt>duì</rt>语<rt>yǔ</rt></ruby> is an unusual word choice. The more common, conversational term for dialogue or conversation would be <ruby lang="zh-CN">对<rt>duì</rt>话<rt>huà</rt></ruby>. [@cr-poem-gloss]{highlight="g-duiyu"}
+
+<ruby lang="zh-CN">对<rt>duì</rt>语<rt>yǔ</rt></ruby> gives a more literary feel, again making this line feel more formal and older than the rest of the poem. [@cr-poem-gloss]{highlight="g-duiyu"}
+
+Additionally, <ruby lang="zh-CN">对<rt>duì</rt></ruby> means face-to-face or reciprocal, suggesting the dialogues are mutual. [@cr-poem-gloss]{highlight="g-dui"}
 
 <ruby lang="zh-CN">它<rt>tā</rt>们<rt>men</rt></ruby> means “they” in English, but in Chinese it indicates that the “they” are not human. While pronounced the same, Chinese uses <ruby lang="zh-CN">他<rt>tā</rt>们<rt>men</rt></ruby> for human “theys” and <ruby lang="zh-CN">它<rt>tā</rt>们<rt>men</rt></ruby> for animals or inanimate “theys.” [@cr-poem-gloss]{highlight="g-tamen-a"}
 
@@ -91,11 +113,23 @@ Lines four and five have parallel three-character phrases with a noun plus a ver
 
 It answers the rhetorical question of line three: the stars’ conversations are not heard; instead, they are in silence and light. [@cr-poem-gloss]{highlight="4-5"}
 
-<ruby lang="zh-CN">沉<rt>chén</rt>默<rt>mò</rt></ruby> is an interesting term. <ruby lang="zh-CN">沉<rt>chén</rt></ruby> by itself can mean to sink or submerge (into water), to indulge or to give in to, dark or gloomy, or long and prolonged. <ruby lang="zh-CN">默<rt>mò</rt></ruby> by itself can mean to be silent, or secretly. When combined, the phrase <ruby lang="zh-CN">沉<rt>chén</rt>默<rt>mò</rt></ruby> evokes a feeling of weighted, consuming silence, not just the lack of sound. [@cr-poem-gloss]{highlight="g-chenmo"}
+<ruby lang="zh-CN">沉<rt>chén</rt>默<rt>mò</rt></ruby> is an interesting term. <ruby lang="zh-CN">沉<rt>chén</rt></ruby> by itself can mean to sink or submerge (into water), to indulge or to give in to, dark or gloomy, or long and prolonged. [@cr-poem-gloss]{highlight="g-chen"}
 
-On its own, <ruby lang="zh-CN">微<rt>wēi</rt></ruby> can mean tiny, faint, waning, or obscure. <ruby lang="zh-CN">光<rt>guāng</rt></ruby> means light as a substance, not brightness. When combined, <ruby lang="zh-CN">微<rt>wēi</rt>光<rt>guāng</rt></ruby> means a faint light that feels like it’s barely there. [@cr-poem-gloss]{highlight="g-weiguang"}
+<ruby lang="zh-CN">默<rt>mò</rt></ruby> by itself can mean to be silent, or secretly. [@cr-poem-gloss]{highlight="g-mo"}
 
-<ruby lang="zh-CN">中<rt>zhōng</rt></ruby> and <ruby lang="zh-CN">里<rt>lǐ</rt></ruby> both mean “in” or “within,” but <ruby lang="zh-CN">中<rt>zhōng</rt></ruby> marks an abstract, enclosed space (as silence is a condition you are inside of) while <ruby lang="zh-CN">里<rt>lǐ</rt></ruby> marks a more concrete area (as faint light is a substance you are surrounded by). Bing Xin’s choice of <ruby lang="zh-CN">中<rt>zhōng</rt></ruby> for <ruby lang="zh-CN">沉<rt>chén</rt>默<rt>mò</rt></ruby> and <ruby lang="zh-CN">里<rt>lǐ</rt></ruby> for <ruby lang="zh-CN">微<rt>wēi</rt>光<rt>guāng</rt></ruby> is a deliberate asymmetry. The English words “in” and “within” only hint at this, and the phonetic contrast is lost. [@cr-poem-grid-en]{highlight="dav-zhong,dav-li,cb-zhong,cb-li,lin-zhong,lin-li"}
+When combined, the phrase <ruby lang="zh-CN">沉<rt>chén</rt>默<rt>mò</rt></ruby> evokes a feeling of weighted, consuming silence, not just the lack of sound. [@cr-poem-gloss]{highlight="g-chenmo"}
+
+On its own, <ruby lang="zh-CN">微<rt>wēi</rt></ruby> can mean tiny, faint, waning, or obscure. [@cr-poem-gloss]{highlight="g-wei"}
+
+<ruby lang="zh-CN">光<rt>guāng</rt></ruby> means light as a substance, not brightness. [@cr-poem-gloss]{highlight="g-guang"}
+
+When combined, <ruby lang="zh-CN">微<rt>wēi</rt>光<rt>guāng</rt></ruby> means a faint light that feels like it’s barely there. [@cr-poem-gloss]{highlight="g-weiguang"}
+
+<ruby lang="zh-CN">中<rt>zhōng</rt></ruby> and <ruby lang="zh-CN">里<rt>lǐ</rt></ruby> both mean “in” or “within,” but <ruby lang="zh-CN">中<rt>zhōng</rt></ruby> marks an abstract, enclosed space (as silence is a condition you are inside of) while <ruby lang="zh-CN">里<rt>lǐ</rt></ruby> marks a more concrete area (as faint light is a substance you are surrounded by). [@cr-poem-gloss]{highlight="g-zhong,g-li"}
+
+Bing Xin’s choice of <ruby lang="zh-CN">中<rt>zhōng</rt></ruby> for <ruby lang="zh-CN">沉<rt>chén</rt>默<rt>mò</rt></ruby> and <ruby lang="zh-CN">里<rt>lǐ</rt></ruby> for <ruby lang="zh-CN">微<rt>wēi</rt>光<rt>guāng</rt></ruby> is a deliberate asymmetry. [@cr-poem-gloss]{highlight="4-5"}
+
+The English words “in” and “within” only hint at this, and the phonetic contrast is lost. [@cr-poem-grid-en]{highlight="dav-zhong,dav-li,cb-zhong,cb-li,lin-zhong,lin-li"}
 
 Again, Bing Xin uses <ruby lang="zh-CN">它<rt>tā</rt>们<rt>men</rt></ruby>, specifying that the stars are not people. This is in contrast to the personification that immediately follows. [@cr-poem-gloss]{highlight="g-tamen-b"}
 
@@ -109,11 +143,15 @@ For a second time, we see the character <ruby lang="zh-CN">深<rt>shēn</rt></ru
 
 Here we get another answer to the question in line three: the stars are not heard, but they have spoken, and their speech is deep, mutual worship. [@cr-poem-gloss]{highlight="6"}
 
-All the English translations have a lot of active language. @cr-poem-grid-en
+All the English translations have a lot of active language. [@cr-poem-grid-en]{highlight="dav-act-1,dav-act-6a,dav-act-6b,cb-zhe,cb-act-3,lin-zhe,lin-act-3a,lin-act-3b,lin-act-6a,lin-act-6b"}
 
-The original Chinese, however, has a much more passive feel. Chinese has a tendency to drop the subjects of sentences, meaning that what happens isn’t caused by anything or anyone in particular. @cr-poem-og
+The original Chinese, however, has a much more passive feel. Chinese has a tendency to drop the subjects of sentences, meaning that what happens isn’t caused by anything or anyone in particular. @cr-poem-gloss
 
-Spacing [@cr-poem-grid]{highlight="ind-zh-2,ind-zh-3,ind-zh-5,ind-zh-6,ind-dav-2,ind-dav-3,ind-dav-5,ind-dav-6,ind-lin-2,ind-lin-3,ind-lin-5,ind-lin-6"}
+Only my translation and Lin’s keep Bing Xin’s indents. [@cr-poem-grid]{highlight="ind-zh-2,ind-zh-3,ind-zh-5,ind-zh-6,ind-dav-2,ind-dav-3,ind-dav-5,ind-dav-6,ind-lin-2,ind-lin-3,ind-lin-5,ind-lin-6"}
+
+Even then, they differ: every Chinese character fills the same square, so an indent is exactly one character. English letters vary in width. [@cr-poem-grid]{highlight="ind-zh-2,ind-zh-3,ind-zh-5,ind-zh-6"}
+
+Line length is impossible to match. In Chinese, one character is one syllable, so the lines run five, five, nine, three, three, and ten, on the page and aloud. @cr-poem-grid
 
 :::{#cr-poem-og lang="zh-CN"}
 <!-- Outside the line block, so highlight line numbers still count from the poem -->
@@ -135,11 +173,11 @@ Spacing [@cr-poem-grid]{highlight="ind-zh-2,ind-zh-3,ind-zh-5,ind-zh-6,ind-dav-2
 <ruby>冰心<rt>Ice heart</rt></ruby>《<ruby>繁星<rt>Many stars</rt></ruby>[·]{.interpunct}<ruby>一<rt>one</rt></ruby>》
 
 | <ruby>[繁]{#g-fan}星<rt>Many stars</rt></ruby><ruby>闪烁<rt>glitter</rt></ruby><ruby>[着]{#g-zhe}<rt>[ongoing]</rt></ruby>——
-| 　<ruby>[深]{#g-shen-a}蓝<rt>deep blue</rt></ruby><ruby>的<rt>[ ]</rt></ruby><ruby>[太空]{#g-taikong}<rt>expanse(s)</rt></ruby>，
-| 　<ruby>[何曾]{#g-heceng}<rt>did ever</rt></ruby><ruby>[听得见]{#g-tingdejian}<rt>to be audible</rt></ruby><ruby>[它们]{#g-tamen-a}<rt>their</rt></ruby><ruby>[对语]{#g-duiyu}<rt>dialogue(s)</rt></ruby>？
-| <ruby>[沉默]{#g-chenmo}<rt>to be silent</rt></ruby><ruby>[中]{#g-zhong}<rt>in</rt></ruby>，
-| 　<ruby>[微光]{#g-weiguang}<rt>faint light</rt></ruby><ruby>[里]{#g-li}<rt>inside</rt></ruby>，
-| 　　<ruby>[它们]{#g-tamen-b}<rt>they</rt></ruby><ruby>[深深]{#g-shenshen}<rt>deep</rt></ruby><ruby>的<rt>[ ]</rt></ruby><ruby>[互相]{#g-huxiang}<rt>mutually</rt></ruby><ruby>[颂赞]{#g-songzan}<rt>to praise</rt></ruby><ruby>[了]{#g-le}<rt>[complete]</rt></ruby>。
+| 　<ruby>[深]{#g-shen-a}蓝<rt>deep blue</rt></ruby><ruby>[的]{#g-de-2}<rt>[ ]</rt></ruby><ruby>[太空]{#g-taikong}<rt>expanse(s)</rt></ruby>，
+| 　<ruby>[何曾]{#g-heceng}<rt>did ever</rt></ruby><ruby>[听得见]{#g-tingdejian}<rt>to be audible</rt></ruby><ruby>[它们]{#g-tamen-a}<rt>their</rt></ruby><ruby>[[对]{#g-dui}语]{#g-duiyu}<rt>dialogue(s)</rt></ruby>？
+| <ruby>[[沉]{#g-chen}[默]{#g-mo}]{#g-chenmo}<rt>to be silent</rt></ruby><ruby>[中]{#g-zhong}<rt>in</rt></ruby>，
+| 　<ruby>[[微]{#g-wei}[光]{#g-guang}]{#g-weiguang}<rt>faint light</rt></ruby><ruby>[里]{#g-li}<rt>inside</rt></ruby>，
+| 　　<ruby>[它们]{#g-tamen-b}<rt>they</rt></ruby><ruby>[深深]{#g-shenshen}<rt>deeply</rt></ruby><ruby>的<rt>[ ]</rt></ruby><ruby>[互相]{#g-huxiang}<rt>mutually</rt></ruby><ruby>[颂赞]{#g-songzan}<rt>extol</rt></ruby><ruby>[了]{#g-le}<rt>[complete]</rt></ruby>。
 :::
 
 ::::{#cr-poem-grid-en .poem-grid .poem-stack}
@@ -149,12 +187,12 @@ Spacing [@cr-poem-grid]{highlight="ind-zh-2,ind-zh-3,ind-zh-5,ind-zh-6,ind-dav-2
 :::{lang="en"}
 Vast Stars (1) by Bing Xin
 
-| [[Vast]{#dav-fan} stars [twinkle continuously]{#dav-zhe}[—]{#dav-dash .dash}]{#dav-1}
+| [[Vast]{#dav-fan} stars [[twinkle]{#dav-act-1} continuously]{#dav-zhe}[—]{#dav-dash .dash}]{#dav-1}
 | 　[Deep blue space,]{#dav-2}
 | 　[Could their words ever be heard?]{#dav-3}
 | [[Within]{#dav-zhong} silence,]{#dav-4}
 | 　[[In]{#dav-li} the glimmer,]{#dav-5}
-| 　　[They have deeply, mutually chanted praises.]{#dav-6}
+| 　　[[They have]{#dav-act-6a} deeply, mutually [chanted]{#dav-act-6b} praises.]{#dav-6}
 :::
 
 :::{lang="en"}
@@ -162,7 +200,7 @@ A Maze of Stars (1) by Bing Xin
 
 | [[A maze of]{#cb-fan} stars [glistens]{#cb-zhe}]{#cb-1}
 | [in the deep azure vault of sky.]{#cb-2}
-| [When before have I overheard their whispers?]{#cb-3}
+| [When before [have I overheard]{#cb-act-3} their whispers?]{#cb-3}
 | [[In]{#cb-zhong} the profound silence,]{#cb-4}
 | [[in]{#cb-li} their own faint light,]{#cb-5}
 | [this deep acknowledgment of one another.]{#cb-6}
@@ -173,10 +211,10 @@ Infinite Stars (1) by Bing Xin
 
 | [[Infinite]{#lin-fan} stars [sparkle]{#lin-zhe}]{#lin-1}
 | 　[In the deep blues of sky]{#lin-2}
-| 　[Does anyone ever hear them talk?]{#lin-3}
+| 　[[Does anyone ever hear]{#lin-act-3a} them [talk]{#lin-act-3b}?]{#lin-3}
 | [[In]{#lin-zhong} the depths of silence]{#lin-4}
 | 　[[Within]{#lin-li} this faint light]{#lin-5}
-| 　　[They brightly sing one another's praise.]{#lin-6}
+| 　　[[They]{#lin-act-6a} brightly [sing]{#lin-act-6b} one another's praise.]{#lin-6}
 :::
 ::::
 
@@ -282,7 +320,7 @@ Infinite Stars (1) by Bing Xin
 
 :::
 
-# Analysis
+# Meaning
 
 :::{.cr-section}
 
