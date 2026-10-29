@@ -37,7 +37,15 @@ format:
 
 :::{.cr-section}
 
-Coming soon... @cr-ctx-poem
+Bing Xin (<ruby lang="zh-CN">冰<rt>Bīng</rt>心<rt>xīn</rt></ruby>) was born in 1900 and grew up in China. @cr-img-bingxin
+
+She was born as Xie Wanying (<ruby lang="zh-CN">谢<rt>Xiè</rt>婉<rt>Wǎn</rt>莹<rt>yíng</rt></ruby>) with <ruby lang="zh-CN">冰<rt>Bīng</rt>心<rt>xīn</rt></ruby> being her pen name, meaning “ice heart.” @cr-img-bingxin
+
+She began writing during the May Fourth Movement of 1919, when young writers stopped using classical Chinese in favor of the vernacular (<ruby lang="zh-CN">白<rt>bái</rt>话<rt>huà</rt></ruby>). @cr-img-mayfourth
+
+Inspired by Tagore’s *Stray Birds* (<ruby lang="zh-CN">飞<rt>Fēi</rt>鸟<rt>niǎo</rt>集<rt>jí</rt></ruby>), she gathered her short thoughts into <ruby lang="zh-CN">繁<rt>Fán</rt>星<rt>xīng</rt></ruby>, 164 brief poems published in 1919 and 1921. @cr-img-straybirds
+
+This is the first. @cr-ctx-poem
 
 :::{#cr-ctx-poem lang="zh-CN"}
 <!-- Copy of cr-poem-og for this section; edit both. -->
@@ -49,6 +57,23 @@ Coming soon... @cr-ctx-poem
 | 沉默中，
 | 　微光里，
 | 　　它们深深的互相颂赞了。
+:::
+
+:::{#cr-img-bingxin}
+<!-- To swap a placeholder below for an image: put the file in
+     stars/images/, replace the box's text with the image line, and drop
+     .img-placeholder. Alt text goes in fig-alt; text in the brackets
+     becomes a visible caption, e.g.
+     ![Bing Xin, about 1920](images/bing-xin.jpg){fig-alt="Describe it"} -->
+![Unknown author, [中国教育新闻网]{lang="zh-CN"}. Public domain, via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=18914059).](images/Bing_Xin.jpg){fig-alt="Colorized portrait of Bing Xin."}
+:::
+
+:::{#cr-img-mayfourth}
+![Unknown author. Shown at the Hong Kong Central Library ([香港中央圖書館]{lang="zh-Hant"}) exhibition for the 100th anniversary of the May Fourth Movement, April 2019. Public domain, via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=437318).](images/may_fourth.jpg){fig-alt="A black and white image of a mass of people in front of a Chinese building with banners."}
+:::
+
+:::{#cr-img-straybirds}
+![](images/stray_birds.jpg){fig-alt="A book covered with an older man labeled Stray Birds by Rabindranath Tagore."}
 :::
 
 :::
