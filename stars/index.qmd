@@ -29,7 +29,7 @@ format:
   <span class="story-toc-sep" aria-hidden="true">/</span>
   <a href="#understanding-the-poem">Understanding the poem</a>
   <span class="story-toc-sep" aria-hidden="true">/</span>
-  <a href="#meaning">Meaning</a>
+  <a href="#analysis">Analysis</a>
 </nav>
 ```
 
@@ -320,24 +320,55 @@ Infinite Stars (1) by Bing Xin
 
 :::
 
-# Meaning
+# Analysis
 
 :::{.cr-section}
 
-Summary of poem @cr-ana-poem
+A myriad of stars glitter in the sky. No one hears them, but in silence and faint light, they deeply praise each other. @cr-ana-gloss
 
-Thesis @cr-ana-poem
+The stars speak without being heard through silent light. @cr-ana-gloss
 
-:::{#cr-ana-poem lang="zh-CN"}
-<!-- Copy of cr-poem-og for this section; edit both. -->
-冰心《繁星[·]{.interpunct}一》
+The poem starts with light as the stars <ruby lang="zh-CN">闪<rt>shǎn</rt>烁<rt>shuò</rt></ruby> (glitter). Before we even consider if they speak, they are shining without end. [@cr-ana-gloss]{highlight="1"}
 
-| 繁星闪烁着——
-| 　深蓝的太空，
-| 　何曾听得见它们对语？
-| 沉默中，
-| 　微光里，
-| 　　它们深深的互相颂赞了。
+The marker <ruby lang="zh-CN">着<rt>zhe</rt></ruby> makes the glittering continuous, so their light, and therefore their speech, never ends. [@cr-ana-gloss]{highlight="a-g-zhe"}
+
+Line three asks if they can be heard. The rhetorical indicator <ruby lang="zh-CN">何<rt>hé</rt>曾<rt>céng</rt></ruby> expects the answer no. [@cr-ana-gloss]{highlight="a-g-heceng"}
+
+The line also has no subject, and therefore no listener. The stars speak to each other and aren’t meant to be heard by us (humans). [@cr-ana-gloss]{highlight="3"}
+
+<ruby lang="zh-CN">它<rt>tā</rt>们<rt>men</rt></ruby> supports this. Bing Xin deliberately chooses a pronoun used for inanimate objects, so human ears are never the audience. [@cr-ana-gloss]{highlight="a-g-tamen-a"}
+
+<ruby lang="zh-CN">对<rt>duì</rt></ruby> in <ruby lang="zh-CN">对<rt>duì</rt>语<rt>yǔ</rt></ruby> means face to face, so we know the stars are talking to each other while we wonder if we can hear them. [@cr-ana-gloss]{highlight="a-g-dui"}
+
+Lines four and five answer the rhetorical question with settings. The stars are in silence and faint light, moving from sound to sight. [@cr-ana-gloss]{highlight="4-5"}
+
+<ruby lang="zh-CN">沉<rt>chén</rt>默<rt>mò</rt></ruby> is a heavy, consuming silence, and <ruby lang="zh-CN">微<rt>wēi</rt>光<rt>guāng</rt></ruby> is a light barely there. The stars speak to each other through almost nothing. [@cr-ana-gloss]{highlight="a-g-chenmo,a-g-weiguang"}
+
+Bing Xin places the stars in silence but surrounded by light. Silence is their condition while light is their medium for their communication. [@cr-ana-gloss]{highlight="a-g-zhong,a-g-li"}
+
+The shape of the poem adds to this. Lines four and five are only three characters each, both short and quiet as the poem itself falls silent. [@cr-ana-gloss]{highlight="4-5"}
+
+Line six confirms their conversations. <ruby lang="zh-CN">互<rt>hù</rt>相<rt>xiāng</rt></ruby> means their conversations are reciprocal with each other and <ruby lang="zh-CN">了<rt>le</rt></ruby> means they’re complete. [@cr-ana-gloss]{highlight="a-g-huxiang,a-g-le"}
+
+<ruby lang="zh-CN">深<rt>shēn</rt>深<rt>shēn</rt></ruby> repeats the <ruby lang="zh-CN">深<rt>shēn</rt></ruby> in “deep blue sky” from line two. The depth of the sky becomes the depth of their praise, and <ruby lang="zh-CN">颂<rt>sòng</rt>赞<rt>zàn</rt></ruby> turns that praise into worship. [@cr-ana-gloss]{highlight="a-g-shen-a,a-g-shenshen,a-g-songzan"}
+
+Line six is the longest line, and ends with a full stop (period) instead of a question mark. The question in line three is answered with this statement: the stars have spoken/ [@cr-ana-gloss]{highlight="3,6"}
+
+Their conversations aren’t heard but are seen by each other through their light. @cr-ana-gloss
+
+Bing Xin suggests that the deepest connections can be seen, not heard. @cr-ana-gloss
+
+:::{#cr-ana-gloss .gloss lang="zh-CN"}
+<!-- Copy of cr-poem-gloss for the Analysis section; edit both.
+     Word names carry an a- prefix to stay unique. -->
+<ruby>冰心<rt>Ice heart</rt></ruby>《<ruby>繁星<rt>Many stars</rt></ruby>[·]{.interpunct}<ruby>一<rt>one</rt></ruby>》
+
+| <ruby>[繁]{#a-g-fan}星<rt>Many stars</rt></ruby><ruby>闪烁<rt>glitter</rt></ruby><ruby>[着]{#a-g-zhe}<rt>[ongoing]</rt></ruby>——
+| 　<ruby>[深]{#a-g-shen-a}蓝<rt>deep blue</rt></ruby><ruby>[的]{#a-g-de-2}<rt>[ ]</rt></ruby><ruby>[太空]{#a-g-taikong}<rt>expanse(s)</rt></ruby>，
+| 　<ruby>[何曾]{#a-g-heceng}<rt>did ever</rt></ruby><ruby>[听得见]{#a-g-tingdejian}<rt>to be audible</rt></ruby><ruby>[它们]{#a-g-tamen-a}<rt>their</rt></ruby><ruby>[[对]{#a-g-dui}语]{#a-g-duiyu}<rt>dialogue(s)</rt></ruby>？
+| <ruby>[[沉]{#a-g-chen}[默]{#a-g-mo}]{#a-g-chenmo}<rt>to be silent</rt></ruby><ruby>[中]{#a-g-zhong}<rt>in</rt></ruby>，
+| 　<ruby>[[微]{#a-g-wei}[光]{#a-g-guang}]{#a-g-weiguang}<rt>faint light</rt></ruby><ruby>[里]{#a-g-li}<rt>inside</rt></ruby>，
+| 　　<ruby>[它们]{#a-g-tamen-b}<rt>they</rt></ruby><ruby>[深深]{#a-g-shenshen}<rt>deeply</rt></ruby><ruby>的<rt>[ ]</rt></ruby><ruby>[互相]{#a-g-huxiang}<rt>mutually</rt></ruby><ruby>[颂赞]{#a-g-songzan}<rt>extol</rt></ruby><ruby>[了]{#a-g-le}<rt>[complete]</rt></ruby>。
 :::
 
 :::
