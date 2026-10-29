@@ -43,7 +43,7 @@ She was born as Xie Wanying (<ruby lang="zh-CN">谢<rt>Xiè</rt>婉<rt>Wǎn</rt>
 
 She began writing during the May Fourth Movement of 1919, when young writers stopped using classical Chinese in favor of the vernacular (<ruby lang="zh-CN">白<rt>bái</rt>话<rt>huà</rt></ruby>). @cr-img-mayfourth
 
-Inspired by Tagore’s *Stray Birds* (<ruby lang="zh-CN">飞<rt>Fēi</rt>鸟<rt>niǎo</rt>集<rt>jí</rt></ruby>), she gathered her short thoughts into <ruby lang="zh-CN">繁<rt>Fán</rt>星<rt>xīng</rt></ruby>, 164 brief poems published in 1919 and 1921. @cr-img-straybirds
+Inspired by Tagore’s *Stray Birds* (<ruby lang="zh-CN">飞<rt>Fēi</rt>鸟<rt>niǎo</rt>集<rt>jí</rt></ruby>), she gathered her short thoughts into <ruby lang="zh-CN">繁<rt>Fán</rt>星<rt>xīng</rt></ruby>, 164 brief poems published in 1919 and 1921. @cr-img-tagore
 
 This is the first. @cr-ctx-poem
 
@@ -72,8 +72,10 @@ This is the first. @cr-ctx-poem
 ![Unknown author. Shown at the Hong Kong Central Library ([香港中央圖書館]{lang="zh-Hant"}) exhibition for the 100th anniversary of the May Fourth Movement, April 2019. Public domain, via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=437318).](images/may_fourth.jpg){fig-alt="A black and white image of a mass of people in front of a Chinese building with banners."}
 :::
 
-:::{#cr-img-straybirds}
-![](images/stray_birds.jpg){fig-alt="A book covered with an older man labeled Stray Birds by Rabindranath Tagore."}
+:::{#cr-img-tagore}
+<!-- CC BY 4.0 requires the author, the licence and a link to the source in
+     the credit; keep all three if the caption is edited. -->
+![Rabindranath Tagore, a Bengali poet who inspired Bing Xin. Photographed by Georges Chevalier at Albert Kahn’s property in Boulogne, France ([Musée départemental Albert-Kahn](https://collections.albert-kahn.hauts-de-seine.fr/document/proprit-d-albert-kahn-boulogne-france-rabindranth-tagore/617a7a45cf8b8968b3386442)). [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=141867988).](images/tagore.jpg){fig-alt="An older bearded man with white hair standing in a blue robe."}
 :::
 
 :::

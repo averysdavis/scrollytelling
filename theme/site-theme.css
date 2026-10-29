@@ -791,6 +791,22 @@ div.quarto-post .metadata a {
   border-bottom-color: var(--color-border);
 }
 
+/* Images in a sticky are capped to the screen height with room for the
+   caption. All stickies in a section share one grid cell, so a single
+   image taller than the screen stretches that cell and pushes every other
+   sticky in the section down out of view. */
+.cr-section .sticky figure {
+  margin: 0 auto;
+  max-width: 40rem;
+  text-align: center;
+}
+
+.cr-section .sticky figure img {
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100dvh - 12rem);
+}
+
 /* Image credits sit under the picture, small and dimmed */
 .cr-section .sticky figcaption {
   margin-top: 0.5rem;
